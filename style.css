@@ -10,13 +10,13 @@ html, body {
 }
 
 a:link {
-  color: #1217ab;
+  color: #141cf4;
 }
 
 a:hover {
-  color: #3a3fcf;
+  color: #4f74f8;
 }
 
 a:active {
-  color: #0c6959;
+  color: #8121e7;
 }
