@@ -11,15 +11,12 @@ html, body {
 
 a:link {
   color: #141cf4;
-  text-decoration: underline;
 }
 
 a:hover {
-  color: #141cf4;
-  text-decoration: none;
+  color: #3a63f9;
 }
 
 a:active {
   color: #8121e7;
-  text-decoration: none;
 }
