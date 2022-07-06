@@ -5,8 +5,8 @@ html, body {
 }
 
 #main {
-  min-height: 100%;
-  margin: 40px;
+  width: 80%;
+  margin: auto;
 }
 
 a:link {
