@@ -1,6 +1,15 @@
 html, body {
-  font-family: 'Helvetica';
+  font-family: "Fira Sans", "Helvetica", "sans-serif";
+  font-weight: 300;
   margin-top: 20px;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+p {
+  font-weight: 300;
 }
 
 #main {
