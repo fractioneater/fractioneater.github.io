@@ -3,6 +3,11 @@ html, body {
   margin-top: 20px;
 }
 
+#main {
+  width: 80%;
+  margin: auto;
+}
+
 h1 {
   font-weight: 500;
 }
@@ -11,9 +16,8 @@ p {
   font-weight: 300;
 }
 
-#main {
-  width: 80%;
-  margin: auto;
+a {
+  font-weight: 400;
 }
 
 a:link {
