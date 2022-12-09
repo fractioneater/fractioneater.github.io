@@ -3,6 +3,15 @@ html, body {
   margin-top: 20px;
 }
 
+.header {
+  padding: 60px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-weight: 400;
+  background: rgb(61, 126, 187);
+}
+
 #main {
   max-width: 60%;
   margin: auto;
