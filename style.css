@@ -31,16 +31,13 @@ p {
 
 a {
   font-weight: 400;
+  text-decoration: none;
 }
 
-a:link {
-  color: #141cf4;
-}
+a:link {color: #1579cb;}
 
-a:hover {
-  color: #3a63f9;
-}
+a:hover {color: #3595e3;}
 
-a:active {
-  color: #8121e7;
-}
+a:visited {color: #7e32da;}
+
+a:active {color: #3b42ca;}
