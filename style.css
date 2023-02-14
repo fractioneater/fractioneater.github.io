@@ -11,10 +11,8 @@ body {
 .header {
   padding: 20px;
   text-align: center;
-  color: white;
   font-size: 24px;
   font-weight: 400;
-  background: rgb(61, 126, 187);
 }
 
 #main {
@@ -36,10 +34,32 @@ a {
   text-decoration: none;
 }
 
-a:link {color: #1579cb;}
+@media (prefers-color-scheme: light) {
+  body {
+    background: #e2e9f1;
+    color: #000000;
+  }
+  a:link {color: #1579cb;}
+  a:hover {color: #3595e3;}
+  a:visited {color: #7e32da;}
+  a:active {color: #3b42ca;}
+  .header {
+    background: #3d7ebb;
+    color: #ffffff;  
+  }
+}
 
-a:hover {color: #3595e3;}
-
-a:visited {color: #7e32da;}
-
-a:active {color: #3b42ca;}
+@media (prefers-color-scheme: dark) { 
+  body {
+    background: #17202c;
+    color: #ffffff;
+  }
+  a:link {color: #3f9be6;}
+  a:hover {color: #5fb1f4;}
+  a:visited {color: #a663f7;}
+  a:active {color: #6b71e6;}
+  .header {
+    background: #21598d;
+    color: #ffffff;  
+  }
+}
