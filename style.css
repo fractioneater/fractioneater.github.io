@@ -2,6 +2,9 @@
 
 html, body {
   font-family: "Fira Sans", Helvetica, sans-serif;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 body {
@@ -11,18 +14,31 @@ body {
 .header {
   padding: 20px;
   text-align: center;
-  font-size: 24px;
-  font-weight: 400;
 }
 
-#main {
+.title {
+  font-size: 48px;
+}
+
+.subtitle {
+  font-size: 24px;
+}
+
+.align-left {
   max-width: 60%;
-  padding-top: 10px;
+  padding-top: 30px;
   margin: auto;
 }
 
-#center {
+.align-center {
+  max-width: 60%;
+  padding-top: 30px;
   text-align: center;
+  margin: auto;
+}
+
+h1 {
+  font-weight: 450;
 }
 
 h2 {
