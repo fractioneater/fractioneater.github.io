@@ -2,18 +2,32 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>404 - page not found</title>
+  <title>404 Error - Page Not Found</title>
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
   <div class="header">
     <h1 class="title">404</h1>
-    <p class="subtitle">the page you're looking for doesn't exist</p>
+    <p class="subtitle" id="url">this page doesn't exist</p>
+    <script>
+      let url = document.URL.split("/");
+      let popped = "";
+      let u = [];
+      while (popped != "fractioneater.github.io") {
+        popped = url.pop();
+        u.push(popped);
+      }
+      let msg = u.reverse().join("/").concat(" doesn't exist");
+      if (msg.includes("404.html")) {
+        msg = "you found what you were looking for"
+      }
+      document.getElementById("url").textContent = msg;
+    </script>
   </div>
   <div class="align-center">
-    <h2>Main Page</h2>
-    <p>(back to the home page)</p>
-    <a href="https://fractioneater.github.io/">https://fractioneater.github.io/</a>
+    <p></p>
+    <p>Well, there's not much you can do here.</p>
+    <a href="https://fractioneater.github.io/">back to the home page</a>
   </div>
 </body>
 </html>
