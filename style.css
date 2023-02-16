@@ -1,14 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&display=swap');
 
-html, body {
+body {
   font-family: "Fira Sans", Helvetica, sans-serif;
+  margin: 0;
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
-}
-
-body {
-  margin: 0;
 }
 
 .header {
@@ -18,10 +15,12 @@ body {
 
 .title {
   font-size: 48px;
+  font-weight: 450;
 }
 
 .subtitle {
   font-size: 24px;
+  font-weight: 300;
 }
 
 .align-left {
@@ -35,10 +34,6 @@ body {
   padding-top: 30px;
   text-align: center;
   margin: auto;
-}
-
-h1 {
-  font-weight: 450;
 }
 
 h2 {
@@ -59,10 +54,12 @@ a {
     background: #e2e9f1;
     color: #000000;
   }
+  
   a:link {color: #1579cb;}
   a:hover {color: #3595e3;}
   a:visited {color: #7e32da;}
   a:active {color: #3b42ca;}
+
   .header {
     background: #3d7ebb;
     color: #ffffff;  
@@ -74,10 +71,12 @@ a {
     background: #17202c;
     color: #ffffff;
   }
+
   a:link {color: #3f9be6;}
   a:hover {color: #5fb1f4;}
   a:visited {color: #b377fc;}
   a:active {color: #757bf3;}
+
   .header {
     background: #21598d;
     color: #ffffff;  
