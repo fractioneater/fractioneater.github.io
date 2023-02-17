@@ -18,7 +18,7 @@
         u.push(popped);
       }
       let msg = u.reverse().join("/").concat(" doesn't exist");
-      if (msg.includes("404.html")) {
+      if (u.includes("404.html") || u.includes("404")) {
         msg = "you found what you were looking for"
       }
       document.getElementById("url").textContent = msg;
