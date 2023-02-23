@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Random Number Grid</title>
+  <script src="main.js"></script>
+  <link href="/style.css" rel="stylesheet">
+  <style>
+    #error {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="main" class="align-left">
+    <h2>Click the button to generate some numbers!</h2>
+    <label for="minInput">Min:</label>
+    <input class="input" name="minInput" id="minInput" type="number" min="0" max="9" value="0">
+    <label for="maxInput">Max:</label>
+    <input class="input" name="maxInput" id="maxInput" type="number" min="0" max="9" value="9">
+    <button class="button" onclick="generateGrid()">Generate</button>
+    <button class="button" onclick="printGrid()">Print</button>
+    <p id="error"></p>
+    <p id="numbers" class="monospace"></p>
+  </div>
+</body>
+</html>

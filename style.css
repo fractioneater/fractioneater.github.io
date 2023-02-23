@@ -1,11 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Fira+Sans:wght@300;400;500&display=swap');
 
 body {
-  font-family: "Fira Sans", Helvetica, sans-serif;
+  font-family: "Fira Sans", sans-serif;
   margin: 0;
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+.monospace {
+  font-family: "Fira Code", monospace;
+  font-weight: 300;
+}
+
+.align-left {
+  max-width: 70%;
+  padding-top: 30px;
+  margin: auto;
+}
+
+.align-center {
+  max-width: 60%;
+  padding-top: 30px;
+  text-align: center;
+  margin: auto;
 }
 
 .header {
@@ -23,26 +45,21 @@ body {
   font-weight: 300;
 }
 
-.align-left {
-  max-width: 60%;
-  padding-top: 30px;
-  margin: auto;
+.input {
+  border-radius: 4px;
+  cursor: text;
+  padding: 3px 6px;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 13px;
 }
 
-.align-center {
-  max-width: 60%;
-  padding-top: 30px;
-  text-align: center;
-  margin: auto;
-}
-
-h2 {font-weight: 500;}
-
-p {font-weight: 300;}
-
-a {
-  font-weight: 400;
-  text-decoration: none;
+.button {
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 3px 10px;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 13px;
+  transition-duration: 0.36s;
 }
 
 @media (prefers-color-scheme: light) {
@@ -50,7 +67,7 @@ a {
     background: #e2e9f1;
     color: #000000;
   }
-  
+
   a:link {color: #1579cb;}
   a:hover {color: #3595e3;}
   a:visited {color: #7e32da;}
@@ -59,6 +76,22 @@ a {
   .header {
     background: #3d7ebb;
     color: #ffffff;  
+  }
+
+  .button {
+    background-color: #e2e9f1;
+    border: 2px solid #83b6f1;
+    color: black;
+  }
+
+  .input {
+    background-color: #e2e9f1;
+    border: 2px solid #83b6f1;
+    color: black;
+  }
+
+  .button:hover {
+    background-color: #83b6f1;
   }
 }
 
@@ -76,5 +109,21 @@ a {
   .header {
     background: #21598d;
     color: #ffffff;  
+  }
+
+  .button {
+    background-color: #17202c;
+    border: 2px solid #406c9f;
+    color: white;
+  }
+
+  .input {
+    background-color: #17202c;
+    border: 2px solid #406c9f;
+    color: white;
+  }
+
+  .button:hover {
+    background-color: #406c9f;
   }
 }
