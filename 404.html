@@ -13,13 +13,23 @@
       let url = document.URL.split("/");
       let popped = "";
       let u = [];
-      while (popped != "fractioneater.github.io") {
+      if (url.includes("number-grid")) {
+        let poppedMatch = "number-grid";
+      } else if (url.includes("battle-bound")) {
+        let poppedMatch = "battle-bound";
+      } else {
+        let poppedMatch = "fractioneater.github.io";
+      }
+      while (popped != poppedMatch) {
         popped = url.pop();
         u.push(popped);
       }
       let msg = u.reverse().join("/").concat(" doesn't exist");
+      if (poppedMatch != "fractioneater.github.io") {
+        msg = "/".concat(msg);
+      }
       if (u.includes("404.html") || u.includes("404")) {
-        msg = "you found what you were looking for"
+        msg = "you found what you were looking for";
       }
       document.getElementById("url").textContent = msg;
     </script>
