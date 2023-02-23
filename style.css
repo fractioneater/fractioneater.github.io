@@ -8,8 +8,13 @@ body {
   text-size-adjust: none;
 }
 
-h2 {
-  font-weight: 500;
+h2 {font-weight: 500;}
+
+p {font-weight: 300;}
+
+a {
+  font-weight: 400;
+  text-decoration: none;
 }
 
 .monospace {
