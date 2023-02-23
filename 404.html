@@ -13,12 +13,13 @@
       let url = document.URL.split("/");
       let popped = "";
       let u = [];
+      let poppedMatch;
       if (url.includes("number-grid")) {
-        let poppedMatch = "number-grid";
+        poppedMatch = "number-grid";
       } else if (url.includes("battle-bound")) {
-        let poppedMatch = "battle-bound";
+        poppedMatch = "battle-bound";
       } else {
-        let poppedMatch = "fractioneater.github.io";
+        poppedMatch = "fractioneater.github.io";
       }
       console.log(poppedMatch);
       while (popped != poppedMatch) {
