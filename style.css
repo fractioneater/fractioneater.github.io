@@ -2,15 +2,15 @@
 
 body {
   font-family: "Fira Sans", sans-serif;
-  margin: 0;
+  margin: 0 0 100px 0;
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
 }
 
-h2 {font-weight: 500;}
+h2 { font-weight: 500; }
 
-p {font-weight: 300;}
+p { font-weight: 300; }
 
 a {
   font-weight: 400;
@@ -87,10 +87,10 @@ code {
     color: #000000;
   }
 
-  a:link {color: #1579cb;}
-  a:hover {color: #3595e3;}
-  a:visited {color: #7e32da;}
-  a:active {color: #3b42ca;}
+  a:link { color: #1579cb; }
+  a:hover { color: #3595e3; }
+  a:visited { color: #7e32da; }
+  a:active { color: #3b42ca; }
 
   .header {
     background: #3d7ebb;
@@ -124,10 +124,10 @@ code {
     color: #ffffff;
   }
 
-  a:link {color: #3f9be6;}
-  a:hover {color: #5fb1f4;}
-  a:visited {color: #b377fc;}
-  a:active {color: #757bf3;}
+  a:link { color: #3f9be6; }
+  a:hover { color: #5fb1f4; }
+  a:visited { color: #b377fc; }
+  a:active { color: #757bf3; }
 
   .header {
     background: #21598d;
