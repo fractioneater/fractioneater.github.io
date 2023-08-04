@@ -52,8 +52,14 @@ a {
 
 pre {
   max-width: 600px;
-  padding-top: 0px;
-  margin: auto;
+  margin: 0px;
+  border-radius: 6px;
+}
+
+code {
+  font-family: "Fira Code", monospace;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .input {
@@ -91,7 +97,6 @@ pre {
 
   pre {
     background-color: #c3cedb;
-    border-radius: 3px;
   }
 
   .button {
@@ -129,7 +134,6 @@ pre {
 
   pre {
     background-color: #1f2a39;
-    border-radius: 3px;
   }
 
   .button {
