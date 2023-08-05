@@ -64,12 +64,12 @@ code {
   font-size: 14px;
 }
 
-.h-comment  { color: #4e606d; }
-.h-keyword  { color: #abb437; }
-.h-operator { color: #93c0d1; }
-.h-function { color: #d9d42e; }
-.h-number   { color: #bd9656; }
-.h-string   { color: #cc90ea; }
+.h-comment  { color: #b8cfe680; }
+.h-keyword  { color: #ffad66; }
+.h-operator { color: #f29e74; }
+.h-function { color: #ffd173; }
+.h-number   { color: #dfbfff; }
+.h-string   { color: #d5ff80; }
 
 .input {
   border-radius: 4px;
