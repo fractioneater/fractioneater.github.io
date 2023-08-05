@@ -64,13 +64,6 @@ code {
   font-size: 14px;
 }
 
-.h-comment  { color: #b8cfe680; }
-.h-keyword  { color: #ffad66; }
-.h-operator { color: #f29e74; }
-.h-function { color: #ffd173; }
-.h-number   { color: #dfbfff; }
-.h-string   { color: #d5ff80; }
-
 .input {
   border-radius: 4px;
   cursor: text;
@@ -108,6 +101,17 @@ code {
     background-color: #c3cedb;
   }
 
+  code {
+    color: #5c6166;
+  }
+
+  .h-comment  { color: #787b8099; }
+  .h-keyword  { color: #fa8d3e; }
+  .h-operator { color: #ed9366; }
+  .h-function { color: #f2ae49; }
+  .h-number   { color: #a37acc; }
+  .h-string   { color: #86b300; }
+
   .button {
     background-color: #e2e9f1;
     border: 2px solid #83b6f1;
@@ -144,6 +148,17 @@ code {
   pre {
     background-color: #1f2a39;
   }
+
+  code {
+    color: #cccac2;
+  }
+
+  .h-comment  { color: #b8cfe680; }
+  .h-keyword  { color: #ffad66; }
+  .h-operator { color: #f29e74; }
+  .h-function { color: #ffd173; }
+  .h-number   { color: #dfbfff; }
+  .h-string   { color: #d5ff80; }
 
   .button {
     background-color: #17202c;
