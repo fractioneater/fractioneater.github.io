@@ -83,7 +83,7 @@ code {
 
 @media (prefers-color-scheme: light) {
   body {
-    background: #e2e9f1;
+    background: #ecf1f8;
     color: #000000;
   }
 
@@ -98,7 +98,7 @@ code {
   }
 
   pre {
-    background-color: #c3cedb;
+    background-color: #fafcff;
   }
 
   code {
@@ -106,11 +106,11 @@ code {
   }
 
   .h-comment  { color: #787b8099; }
-  .h-keyword  { color: #fa8d3e; }
-  .h-operator { color: #ed9366; }
-  .h-function { color: #f2ae49; }
-  .h-number   { color: #a37acc; }
-  .h-string   { color: #86b300; }
+  .h-keyword  { color: #db6d1d; }
+  .h-operator { color: #b3704f; }
+  .h-function { color: #c49606; }
+  .h-number   { color: #996fc3; }
+  .h-string   { color: #709600; }
 
   .button {
     background-color: #e2e9f1;
