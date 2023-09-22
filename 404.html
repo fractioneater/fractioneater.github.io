@@ -10,7 +10,7 @@
     <h1 class="title">404</h1>
     <p class="subtitle" id="url">this page doesn't exist</p>
     <script>
-      let url = document.URL.split("/");
+      let url = document.URL.replace(/(^\w+:|^)\/\//, '').split("/");
       let popped = "";
       let u = [];
       let poppedMatch;
