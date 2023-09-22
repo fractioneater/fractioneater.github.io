@@ -14,14 +14,17 @@
       let popped = "";
       let u = [];
       let poppedMatch;
-      if (url.includes("number-grid")) {
+      console.log(url); //- REMOVE
+      if (url[1] == "number-grid") {
         poppedMatch = "number-grid";
-      } else if (url.includes("battle-bound")) {
+      } else if (url[1] == "battle-bound") {
         poppedMatch = "battle-bound";
+      } else if (url[1] == "flicker") {
+        poppedMatch = "flicker";
       } else {
         poppedMatch = "fractioneater.github.io";
       }
-      console.log(poppedMatch);
+      console.log(poppedMatch); //- REMOVE
       while (popped != poppedMatch) {
         popped = url.pop();
         u.push(popped);
