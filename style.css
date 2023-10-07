@@ -107,6 +107,7 @@ code {
 
   .h-comment  { color: #787b8099; }
   .h-keyword  { color: #db6d1d; }
+  .h-class    { color: #73d0ff; }
   .h-operator { color: #b3704f; }
   .h-function { color: #c49606; }
   .h-number   { color: #996fc3; }
@@ -155,6 +156,7 @@ code {
 
   .h-comment  { color: #b8cfe680; }
   .h-keyword  { color: #ffad66; }
+  .h-class    { color: #87d7ff; }
   .h-operator { color: #f29e74; }
   .h-function { color: #ffd173; }
   .h-number   { color: #dfbfff; }
