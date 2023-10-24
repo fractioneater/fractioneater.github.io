@@ -1,0 +1,117 @@
+@media (prefers-color-scheme: light) {
+  :root {
+    --title: #475f7a;
+    --subtitle: #7688a4;
+    --header: #3d70be;
+    --nav-header: #677489;
+    --faded: #cececf;
+    --almost-invisible: #dddddf;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --title: #a3adbe;
+    --subtitle: #7f8eac;
+    --header: #abc9ef;
+    --nav-header: #8c9bac;
+    --faded: #38384a;
+    --almost-invisible: #29293a;
+  }
+}
+
+.page {
+  min-height: calc(100% - 18em);
+  margin: 0 auto 160px;
+  width: 900px;
+}
+
+.page::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+header {
+  padding: 0;
+  background-color: unset;
+  color: var(--body-fg);
+  border-bottom: 1px solid var(--faded);
+}
+
+header .page {
+  height: 8em;
+  margin-bottom: 0;
+}
+
+header h1 {
+  position: absolute;
+  left: 0;
+  top: calc((8em / 3) - 0.6em);
+  padding: 0;
+  margin: 0;
+  color: var(--title);
+  font: 700 40px "Rokkitt";
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+header h2 {
+  position: absolute;
+  left: 0;
+  top: calc(8em - 0.6em);
+  padding: 0;
+  margin: 0;
+  color: var(--subtitle);
+  font: 500 18px "Rokkitt";
+  text-align: left;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  border-top: 1px solid var(--almost-invisible);
+}
+
+main {
+  margin-top: 30px;
+  float: left;
+}
+
+.main-column, main {
+  width: 660px;
+  position: relative;
+}
+
+h2 {
+  margin: 24px 0 4px 0;
+  color: var(--header);
+  font-family: "Rokkitt";
+  font-weight: 500;
+}
+
+nav {
+  margin-top: 30px;
+  float: right;
+  width: 160px;
+}
+
+nav h2 {
+  text-transform: uppercase;
+  color: var(--nav-header);
+  font: 500 14px "Fira Sans";
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+nav ul {
+  margin: 6px 0 20px 0;
+  padding: 0;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+nav li {
+  list-style-type: none;
+  margin: 0 0 4px 0;
+}

@@ -1,11 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Fira+Sans:wght@300;400;500&display=swap');
+@import "/iosevka-webfont/iosevka-ss17.css";
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --header-bg: #3d7ebb;
+    --header-fg: white;
+    --body-bg: #ecf1f8;
+    --body-fg: black;
+    --link: #1579cb;
+    --link-hover: #3595e3;
+    --codeblock-bg: #fafcff;
+    --codeblock-fg: #5c6166;
+    --highlight-comment: #4b4f5699;
+    --highlight-keyword: #db6d1d;
+    --highlight-class: #4fb8ed;
+    --highlight-operator: #b3704f;
+    --highlight-function: #c49606;
+    --highlight-number: #996fc3;
+    --highlight-string: #709600;
+    --button: #e2e9f1;
+    --button-text: black;
+    --button-border: #83b6f1;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --header-bg: #21598d;
+    --header-fg: white;
+    --body-bg: #17202c;
+    --body-fg: white;
+    --link: #3f9be6;
+    --link-hover: #77bffa;
+    --codeblock-bg: #1f2a39;
+    --codeblock-fg: #cccac2;
+    --highlight-comment: #b8cfe680;
+    --highlight-keyword: #ffad66;
+    --highlight-class: #87d7ff;
+    --highlight-operator: #f29e74;
+    --highlight-function: #ffd173;
+    --highlight-number: #dfbfff;
+    --highlight-string: #d5ff80;
+    --button: #17202c;
+    --button-text: white;
+    --button-border: #406c9f;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.preload {
+  transition: none;
+}
 
 body {
   font-family: "Fira Sans", sans-serif;
-  margin: 0 0 100px 0;
+  margin: 0;
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+  background: var(--body-bg);
+  color: var(--body-fg);
 }
 
 h2 { font-weight: 500; }
@@ -13,13 +70,18 @@ h2 { font-weight: 500; }
 p { font-weight: 300; }
 
 a {
-  font-weight: 400;
+  color: var(--link);
   text-decoration: none;
+  transition: color 0.2s;
+  font-weight: 400;
+}
+
+a:hover {
+  color: var(--link-hover);
 }
 
 .monospace {
-  font-family: "Fira Code", monospace;
-  font-weight: 300;
+  font: 300 "Iosevka SS17 Web", monospace;
 }
 
 .align-left {
@@ -35,9 +97,11 @@ a {
   margin: auto;
 }
 
-.header {
+header {
   padding: 20px;
   text-align: center;
+  background: var(--header-bg);
+  color: var(--header-fg);
 }
 
 .title {
@@ -51,130 +115,48 @@ a {
 }
 
 pre {
-  max-width: 600px;
+  max-width: 660px;
   margin: 0px;
   padding: 20px;
   border-radius: 6px;
   overflow-x: auto;
+  background-color: var(--codeblock-bg);
 }
 
 code {
-  font-family: "Fira Code", monospace;
-  font-weight: 500;
-  font-size: 14px;
+  color: var(--codeblock-fg);
+  font: 500 15px "Iosevka SS17 Web", monospace;
 }
 
 .input {
-  border-radius: 4px;
   cursor: text;
   padding: 3px 6px;
-  font-family: "Fira Sans", sans-serif;
-  font-size: 13px;
+  background-color: var(--button);
+  color: var(--button-text);
+  border: 2px solid var(--button-border);
+  border-radius: 4px;
+  font: 13px "Fira Sans", sans-serif;
 }
 
 .button {
-  border-radius: 4px;
   cursor: pointer;
   padding: 3px 10px;
-  font-family: "Fira Sans", sans-serif;
-  font-size: 13px;
+  background-color: var(--button);
+  color: var(--button-text);
+  border: 2px solid var(--button-border);
+  border-radius: 4px;
+  font: 13px "Fira Sans", sans-serif;
   transition-duration: 0.36s;
 }
 
-@media (prefers-color-scheme: light) {
-  body {
-    background: #ecf1f8;
-    color: #000000;
-  }
-
-  a:link    { color: #1579cb; }
-  a:hover   { color: #3595e3; }
-  a:visited { color: #7e32da; }
-  a:active  { color: #3b42ca; }
-
-  .header {
-    background: #3d7ebb;
-    color: #ffffff;  
-  }
-
-  pre {
-    background-color: #fafcff;
-  }
-
-  code {
-    color: #5c6166;
-  }
-
-  .h-comment  { color: #787b8099; }
-  .h-keyword  { color: #db6d1d; }
-  .h-class    { color: #4fb8ed; }
-  .h-operator { color: #b3704f; }
-  .h-function { color: #c49606; }
-  .h-number   { color: #996fc3; }
-  .h-string   { color: #709600; }
-
-  .button {
-    background-color: #e2e9f1;
-    border: 2px solid #83b6f1;
-    color: black;
-  }
-
-  .input {
-    background-color: #e2e9f1;
-    border: 2px solid #83b6f1;
-    color: black;
-  }
-
-  .button:hover {
-    background-color: #83b6f1;
-  }
+.button:hover {
+  background-color: var(-button-border);
 }
 
-@media (prefers-color-scheme: dark) { 
-  body {
-    background: #17202c;
-    color: #ffffff;
-  }
-
-  a:link    { color: #3f9be6; }
-  a:hover   { color: #5fb1f4; }
-  a:visited { color: #b377fc; }
-  a:active  { color: #757bf3; }
-
-  .header {
-    background: #21598d;
-    color: #ffffff;  
-  }
-
-  pre {
-    background-color: #1f2a39;
-  }
-
-  code {
-    color: #cccac2;
-  }
-
-  .h-comment  { color: #b8cfe680; }
-  .h-keyword  { color: #ffad66; }
-  .h-class    { color: #87d7ff; }
-  .h-operator { color: #f29e74; }
-  .h-function { color: #ffd173; }
-  .h-number   { color: #dfbfff; }
-  .h-string   { color: #d5ff80; }
-
-  .button {
-    background-color: #17202c;
-    border: 2px solid #406c9f;
-    color: white;
-  }
-
-  .input {
-    background-color: #17202c;
-    border: 2px solid #406c9f;
-    color: white;
-  }
-
-  .button:hover {
-    background-color: #406c9f;
-  }
-}
+.h-comment  { color: var(--highlight-comment); }
+.h-keyword  { color: var(--highlight-keyword); }
+.h-class    { color: var(--highlight-class); }
+.h-operator { color: var(--highlight-operator); }
+.h-function { color: var(--highlight-function); }
+.h-number   { color: var(--highlight-number); }
+.h-string   { color: var(--highlight-string); }

@@ -1,18 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <title>Flicker</title>
-  <link href="/style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@200;300;400;500;600;700&display=block" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&display=swap" type="text/css" rel="stylesheet">
+  <link href="/style.css" type="text/css" rel="stylesheet">
+  <link href="./flicker.css" type="text/css" rel="stylesheet">
+  <script>
+    window.onload = function() {
+      document.querySelector(".preload").classList.remove("preload");
+    }
+  </script>  
 </head>
-<body>
-  <div class="header">
-    <h1 class="title">Flicker</h1>
-    <p class="subtitle">fractioneater.github.io</p>
+<body class="preload">
+<header>
+  <div class="page">
+    <div class="main-column">
+      <h1>Flicker</h1>
+      <h2>fractioneater.github.io</h2>    
+    </div>
   </div>
-  <div id="main" class="align-left">
-    <h2>Flicker</h2>
-    <p>Flicker is a small, dynamically typed language that I am in the process of making.</p>
+</header>
+<div class="page">
+  <nav>
+    <ul>
+      <li><a href="./">Main Page</a></li>
+      <li><a href="https://github.com/fractioneater/flicker">Github</a></li>
+    </ul>
+    <section>
+      <h2>More Stuff</h2>
+      <ul>
+        <li>Another Item</li>
+        <li>Even More</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Api Reference</h2>
+      <ul>
+        <li><a href="./core">Standard Library</a></li>
+      </ul>
+    </section>
+  </nav>
+  <main>
+    <h2>Flicker is a small, dynamically typed scripting language</h2>
+    <hr>
     <p>Instead of listening to me talk about it, why don't I show you some code:</p>
 <pre><code><span class="h-keyword">var</span><span> i</span><span class="h-operator"> =</span><span class="h-number"> 4</span>
 <span></span>
@@ -33,6 +67,7 @@
 <span class="h-comment"># 49.202</span>
 </code></pre>
     <p>This page is just a beginning, so you'll see more here once I'm satisfied with Flicker itself.</p>
-  </div>
+  </main>  
+</div>
 </body>
 </html>
