@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <title>Home - fractioneater</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Fira+Sans:wght@300;400;500&display=swap" type="text/css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&display=swap" type="text/css" rel="stylesheet">
   <link href="style.css" type="text/css" rel="stylesheet">
+  <script>
+    window.onload = function() {
+      document.querySelector(".preload").classList.remove("preload");
+    }
+  </script>
 </head>
-<body>
+<body class="preload">
   <header>
     <h1 class="title">Home</h1>
     <p class="subtitle">fractioneater.github.io</p>
@@ -25,16 +30,16 @@
     <p>These are projects I've made. Well, I made most of them.</p>
     <ul>
       <li>
-        <a href="https://fractioneater.github.io/flicker">Flicker</a>
+        <a href="./flicker">Flicker</a>
         <p>An easy to use, python-like programming language that I am working on.</p>
       </li>
       <li>
-        <a href="https://fractioneater.github.io/battle-bound">Battle Bound</a>
+        <a href="./battle-bound">Battle Bound</a>
         <p>This game was originally made by
         <a href="https://scratch.mit.edu/users/KIKOKO_">@KIKOKO_</a>
         and brought to the web by me.</p>
       </li>
-      <li><a href="https://fractioneater.github.io/number-grid">Number Grid</a></li>
+      <li><a href="./number-grid">Number Grid</a></li>
     </ul>
   </div>
 </body>

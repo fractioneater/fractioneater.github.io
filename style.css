@@ -8,6 +8,18 @@
     --body-fg: black;
     --link: #1579cb;
     --link-hover: #3595e3;
+
+/*  --shiki-color-background: #fafcff;
+    --shiki-color-text: #5c6166;
+    --shiki-token-comment: #4b4f5699;
+    --shiki-token-keyword: #db6d1d;
+    --shiki-token-parameter: #4fb8ed;
+    --shiki-token-punctuation: #b3704f;
+    --shiki-token-function: #c49606;
+    --shiki-token-constant: #996fc3;
+    --shiki-token-string: #709600;
+    --shiki-token-link: #000000; */
+
     --codeblock-bg: #fafcff;
     --codeblock-fg: #5c6166;
     --highlight-comment: #4b4f5699;
@@ -17,6 +29,7 @@
     --highlight-function: #c49606;
     --highlight-number: #996fc3;
     --highlight-string: #709600;
+
     --button: #e2e9f1;
     --button-text: black;
     --button-border: #83b6f1;
@@ -31,6 +44,18 @@
     --body-fg: white;
     --link: #3f9be6;
     --link-hover: #77bffa;
+
+/*  --shiki-color-background: #1f2a39;
+    --shiki-color-text: #cccac2;
+    --shiki-token-comment: #b8cfe680;
+    --shiki-token-keyword: #ffad66;
+    --shiki-token-parameter: #87d7ff;
+    --shiki-token-punctuation: #f29e74;
+    --shiki-token-function: #ffd173;
+    --shiki-token-constant: #dfbfff;
+    --shiki-token-string: #d5ff80;
+    --shiki-token-link: #000000; */
+
     --codeblock-bg: #1f2a39;
     --codeblock-fg: #cccac2;
     --highlight-comment: #b8cfe680;
@@ -40,6 +65,7 @@
     --highlight-function: #ffd173;
     --highlight-number: #dfbfff;
     --highlight-string: #d5ff80;
+
     --button: #17202c;
     --button-text: white;
     --button-border: #406c9f;
