@@ -189,7 +189,7 @@
       ]
     },
     "call": {
-      "match": "\\b(([A-Z]\\w*)|(\\w+))\\b(\\(|{)",
+      "match": "\\b(?:([A-Z]\\w*)|(\\w+))\\b(\\(|{)",
       "captures": {
         "1": { "name": "entity.name.type.flicker" },
         "2": { "name": "entity.name.function.flicker" }
@@ -209,11 +209,12 @@
       }
     },
     "class": {
-      "match": "\\b(class)\\s+(\\w+)\\s+((<)?\\s+(\\w+))?",
+      "match": "\\b(class)\\s+(\\w+)\\s+(?:(<)\\s+(\\w+))?",
       "captures": {
         "1": { "name": "storage.type.class.flicker" },
         "2": { "name": "entity.name.type.class.flicker" },
-        "3": { "name": "entity.name.type.class.flicker" }
+        "3": { "name": "keyword.operator.inherit.flicker" },
+        "4": { "name": "entity.name.type.class.flicker" }
       }
     }
   }
