@@ -7,19 +7,66 @@
   ],
 
   "patterns": [
-    { "include": "#code" },
+    { "include": "#comment" },
+    { "include": "#block-comment" },
+    { "include": "#string" },
+    { "include": "#lambda" },
+    { "include": "#keyword" },
+    { "include": "#constant" },
+    { "include": "#variable" },
+    { "include": "#type" },
+    { "include": "#modifier" },
+    { "include": "#declaration" },
+    { "include": "#function" },
+    { "include": "#call" },
+    { "include": "#method-call" },
+    { "include": "#callable" },
     { "include": "#class" }
   ],
   "repository": {
     "comment": {
-      "name": "comment.line.flicker",
-      "match": "#(?!:).*"
+      "name": "comment.line.number-sign.flicker",
+      "match": "#(?!:).*\\n?"
     },
     "block-comment": {
       "name": "comment.block.flicker",
       "begin": "#:",
       "end": "#",
       "patterns": [ { "include": "#block-comment" } ]
+    },
+        "string": {
+      "name": "string.quoted.double.flicker",
+      "begin": "\"",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.flicker"
+        }
+      },
+      "end": "\"",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.flicker"
+        }
+      },
+      "patterns": [
+        { "include": "#string-escapes" }
+      ]
+    },
+    "string-escapes": {
+      "patterns": [
+        {
+          "name": "constant.character.escape.flicker",
+          "match": "\\\\(?:[0\"\\abfnrtv]|x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4}|U[0-9A-Fa-f]{8})"
+        },
+        {
+          "name": "invalid.illegal.unknown-escape.flicker",
+          "match": "\\\\(?:x[0-9A-Fa-f]{0,1}|u[0-9A-Fa-f]{0,3}|U[0-9A-Fa-f]{0,7}|.)"
+        },
+        {
+          "name": "constant.character.interpolation.flicker",
+          "match": "=\\((.*?)\\)"
+        }
+      ]
     },
     "lambda": {
       "begin": "{",
@@ -36,7 +83,6 @@
       },
       "name": "meta.lambda.flicker",
       "patterns": [
-        { "include": "code" },
         {
           "name": "meta.lambda.parameters.flicker",
           "begin": "\\|",
@@ -54,7 +100,7 @@
       "patterns": [
         {
           "name": "keyword.control.flicker",
-          "match": "\\b(?:break|continue|return|do|if|when|else|elif|for|each|while)\\b"
+          "match": "\\b(?:break|continue|return|print|do|if|when|else|elif|for|each|while)\\b"
         },
         {
           "name": "keyword.operator.flicker",
@@ -62,7 +108,7 @@
         },
         {
           "name": "keyword.operator.range.flicker",
-          "match": "(\\.\\.|:)"
+          "match": "(\\.\\.|(?<!:):(?!:))"
         },
         {
           "name": "keyword.operator.arithmetic.flicker",
@@ -102,77 +148,35 @@
         }
       ]
     },
-    "string": {
-      "name": "string.quoted.double.flicker",
-      "begin": "\"",
-      "end": "\"",
-      "patterns": [
-        { "include": "#string-escapes" }
-      ]
+    "type": {
+      "name": "entity.name.type.flicker",
+      "match": "\\b([A-Z]\\w*)\\b"
     },
-    "string-escapes": {
+    "modifier": {
+      "name": "storage.modifier.flicker",
+      "match": "\\b(static|attribute)\\b"
+    },
+    "declaration": {
       "patterns": [
         {
-          "name": "constant.character.escape.flicker",
-          "match": "\\\\(?:[0\"\\abfnrtv]|x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4}|U[0-9A-Fa-f]{8})"
+          "name": "storage.type.variable.flicker",
+          "match": "\\b(var)\\b"
         },
         {
-          "name": "invalid.illegal.unknown-escape.flicker",
-          "match": "\\\\(?:x[0-9A-Fa-f]{0,1}|u[0-9A-Fa-f]{0,3}|U[0-9A-Fa-f]{0,7}|.)"
-        },
-        {
-          "name": "constant.character.interpolation.flicker",
-          "match": "=\\((.*?)\\)"
+          "name": "storage.type.function.flicker",
+          "match": "\\b(fun)\\b"
         }
       ]
     },
     "function": {
-      "name": "meta.function.flicker",
-      "match": "(?:[(.|::)]|\\b)(\\w+)(\\(|\\{)",
+      "match": "\\b(fun)\\b\\s+(\\w+)",
       "captures": {
-        "1": { "name": "entity.function.flicker" }
-      }
-    },
-    "static-function": {
-      "name": "meta.static-function.flicker",
-      "match": "\\b([A-Z]+\\w*)[(.|::)](\\w+)(\\(|\\{)",
-      "captures": {
-        "1": { "name": "entity.name.type.flicker" },
-        "2": { "name": "entity.name.function.class.flicker" }
-      }
-    },
-    "static-attribute": {
-      "name": "meta.static-attribute.flicker",
-      "match": "\\b([A-Z]+\\w*)[(.|::)](\\w+)\\b",
-      "captures": {
-        "1": { "name": "entity.name.type.flicker" },
-        "2": { "name": "variable.other.constant" }
-      }
-    },
-    "code": {
-      "patterns": [
-        { "include": "#block-comment" },
-        { "include": "#comment" },
-        { "include": "#keyword" },
-        { "include": "#constant" },
-        { "include": "#variable" },
-        { "include": "#string" },
-        { "include": "#function" },
-        { "include": "#static-function" },
-        { "include": "#static-attribute" }
-      ]
-    },
-    "method": {
-      "name": "meta.method.flicker",
-      "begin": "(?:\\b((static)?|(attribute)?)\\s+)?(\\w+=|\\w+|\\+|-|\\*|\\/|%|<=?|>=?|==|!=?|&|\\||~)",
-      "beginCaptures": {
-        "1": { "name": "storage.modifier.flicker" },
+        "1": { "name": "storage.type.function.flicker" },
         "2": { "name": "entity.name.function.flicker" }
       },
-      "end": "}",
       "patterns": [
         {
-          "name": "meta.method.identifier.flicker",
+          "name": "meta.parameters.function.flicker",
           "begin": "\\(",
           "end": "\\)",
           "patterns": [
@@ -181,39 +185,36 @@
               "match": "\\w+"
             }
           ]
-        },
-        {
-          "name": "meta.method.body.flicker",
-          "begin": "{",
-          "end": "(?=})",
-          "patterns": [
-            { "include": "#code" }
-          ]
         }
       ]
     },
+    "call": {
+      "match": "\\b(([A-Z]\\w*)|(\\w+))\\b(\\(|{)",
+      "captures": {
+        "1": { "name": "entity.name.type.flicker" },
+        "2": { "name": "entity.name.function.flicker" }
+      }
+    },
+    "method-call": {
+      "match": "\\.(\\w+)(\\(|{)",
+      "captures": {
+        "1": { "name": "entity.name.function.flicker" }
+      }
+    },
+    "callable": {
+      "match": "::(\\w+)(?:\\((\\d+)\\))?",
+      "captures": {
+        "1": { "name": "entity.name.function.flicker" },
+        "2": { "name": "variable.parameter.flicker" }
+      }
+    },
     "class": {
-      "name": "meta.class",
-      "begin": "\\b(class)\\s+(\\w+)\\s+((<)?\\s+(\\w+))?",
-      "beginCaptures": {
+      "match": "\\b(class)\\s+(\\w+)\\s+((<)?\\s+(\\w+))?",
+      "captures": {
         "1": { "name": "storage.type.class.flicker" },
-        "2": { "name": "entity.name.class.flicker" },
-        "3": { "name": "entity.name.class.flicker" }
-      },
-      "end": "}",
-      "patterns": [
-        {
-          "name": "meta.class.body.flicker",
-          "begin": "\\n",
-          "patterns": [
-              { "include": "#comment" },
-              { "include": "#block-comment" },
-              { "include": "#method" }
-          ],
-          "end": "(?=})"
-        }
-      ]
+        "2": { "name": "entity.name.type.class.flicker" },
+        "3": { "name": "entity.name.type.class.flicker" }
+      }
     }
-  },
-  "uuid": "todo..."
+  }
 }

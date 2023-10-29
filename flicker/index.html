@@ -48,10 +48,32 @@
     <h2>Flicker is a small, dynamically typed scripting language</h2>
     <hr>
     <p>Instead of listening to me talk about it, why don't I show you some code:</p>
-    <!-- <div id="example-code"></div>
+    <div id="example-code" class="shiki-highlight">
+    <pre id="example-code-src" class="shiki-code">
+var i = 4
+
+fun three(arg)
+  if arg == 3
+    print "three"
+
+three(i)
+
+class Test
+  init(+property)
+    print "initializing instance"
+
+  getProperty()
+    return this.property
+
+print Test(49.202).getProperty()
+
+# output:
+# initializing instance
+# 49.202</pre>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/shiki"></script>
-    <script type="module" src="./shiki.js"></script> -->
-<pre><code><span class="h-keyword">var</span><span> i</span><span class="h-operator"> =</span><span class="h-number"> 4</span>
+    <script type="module" src="./shiki.js"></script>
+<!-- <pre><code><span class="h-keyword">var</span><span> i</span><span class="h-operator"> =</span><span class="h-number"> 4</span>
 <span></span>
 <span class="h-keyword">if </span><span>i</span><span class="h-operator"> ==</span><span class="h-number"> 3</span>
   <span class="h-keyword">print</span><span class="h-string"> "three"</span>
@@ -67,7 +89,7 @@
 <span></span>
 <span class="h-comment"># output:</span>
 <span class="h-comment"># initializing instance</span>
-<span class="h-comment"># 49.202</span></code></pre>      
+<span class="h-comment"># 49.202</span></code></pre>       -->
     <p>This page is just a beginning, so you'll see more here once I'm satisfied with Flicker itself.</p>
   </main>  
 </div>

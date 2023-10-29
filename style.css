@@ -9,7 +9,7 @@
     --link: #1579cb;
     --link-hover: #3595e3;
 
-/*  --shiki-color-background: #fafcff;
+    --shiki-color-background: #fafcff;
     --shiki-color-text: #5c6166;
     --shiki-token-comment: #4b4f5699;
     --shiki-token-keyword: #db6d1d;
@@ -18,7 +18,8 @@
     --shiki-token-function: #c49606;
     --shiki-token-constant: #996fc3;
     --shiki-token-string: #709600;
-    --shiki-token-link: #000000; */
+    --shiki-token-string-expression: #709600;
+    --shiki-token-link: #000000;
 
     --codeblock-bg: #fafcff;
     --codeblock-fg: #5c6166;
@@ -45,7 +46,7 @@
     --link: #3f9be6;
     --link-hover: #77bffa;
 
-/*  --shiki-color-background: #1f2a39;
+    --shiki-color-background: #1f2a39;
     --shiki-color-text: #cccac2;
     --shiki-token-comment: #b8cfe680;
     --shiki-token-keyword: #ffad66;
@@ -54,7 +55,8 @@
     --shiki-token-function: #ffd173;
     --shiki-token-constant: #dfbfff;
     --shiki-token-string: #d5ff80;
-    --shiki-token-link: #000000; */
+    --shiki-token-string-expression: #d5ff80;
+    --shiki-token-link: #000000;
 
     --codeblock-bg: #1f2a39;
     --codeblock-fg: #cccac2;
@@ -147,6 +149,10 @@ pre {
   border-radius: 6px;
   overflow-x: auto;
   background-color: var(--codeblock-bg);
+}
+
+pre.shiki-code {
+  display: none;
 }
 
 code {
