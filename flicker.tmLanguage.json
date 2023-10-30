@@ -100,7 +100,7 @@
       "patterns": [
         {
           "name": "keyword.control.flicker",
-          "match": "\\b(?:break|continue|return|print|pass|do|if|when|else|elif|for|each|while)\\b"
+          "match": "\\b(?:break|continue|return|print|error|pass|do|if|when|else|elif|for|each|while)\\b"
         },
         {
           "name": "keyword.operator.flicker",
@@ -169,7 +169,7 @@
       ]
     },
     "function": {
-      "match": "\\b(fun)\\b\\s+(\\w+)",
+      "match": "\\b(fun)\\b\\s+`?(\\w+)`?",
       "captures": {
         "1": { "name": "storage.type.function.flicker" },
         "2": { "name": "entity.name.function.flicker" }
@@ -189,27 +189,27 @@
       ]
     },
     "call": {
-      "match": "\\b(?:([A-Z]\\w*)|(\\w+))\\b(\\(|{)",
+      "match": "`?\\b(?:([A-Z]\\w*)|(\\w+))`?\\b(\\(|{)",
       "captures": {
         "1": { "name": "entity.name.type.flicker" },
         "2": { "name": "entity.name.function.flicker" }
       }
     },
     "method-call": {
-      "match": "\\.(\\w+)(\\(|{)",
+      "match": "\\.`?(\\w+)`?(\\(|{)",
       "captures": {
         "1": { "name": "entity.name.function.flicker" }
       }
     },
     "callable": {
-      "match": "::(\\w+)(?:\\((\\d+)\\))?",
+      "match": "::`?(\\w+)`?(?:\\((\\d+)\\))?",
       "captures": {
         "1": { "name": "entity.name.function.flicker" },
         "2": { "name": "variable.parameter.flicker" }
       }
     },
     "class": {
-      "match": "\\b(class)\\s+(\\w+)\\s+(?:(<)\\s+(\\w+))?",
+      "match": "\\b(class)\\s+`?(\\w+)`?\\s+(?:(<)\\s+`?(\\w+)`?)?",
       "captures": {
         "1": { "name": "storage.type.class.flicker" },
         "2": { "name": "entity.name.type.class.flicker" },
