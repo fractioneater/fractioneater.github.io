@@ -56,7 +56,7 @@
       "patterns": [
         {
           "name": "constant.character.escape.flicker",
-          "match": "\\\\(?:[0\"\\abfnrtv]|x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4}|U[0-9A-Fa-f]{8})"
+          "match": "\\\\(?:[\"\\\\=0abefnrtv]|x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4}|U[0-9A-Fa-f]{8})"
         },
         {
           "name": "invalid.illegal.unknown-escape.flicker",
@@ -100,7 +100,7 @@
       "patterns": [
         {
           "name": "keyword.control.flicker",
-          "match": "\\b(?:break|continue|return|print|do|if|when|else|elif|for|each|while)\\b"
+          "match": "\\b(?:break|continue|return|print|pass|do|if|when|else|elif|for|each|while)\\b"
         },
         {
           "name": "keyword.operator.flicker",
