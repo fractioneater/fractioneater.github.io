@@ -12,6 +12,7 @@
     { "include": "#string" },
     { "include": "#lambda" },
     { "include": "#keyword" },
+    { "include": "#keyword-loop" },
     { "include": "#constant" },
     { "include": "#variable" },
     { "include": "#type" },
@@ -68,6 +69,10 @@
         }
       ]
     },
+    "semicolon": {
+      "name": "invalid.deprecated.semicolon.flicker",
+      "match": "\\;$"
+    },
     "lambda": {
       "begin": "{",
       "beginCaptures": {
@@ -100,19 +105,19 @@
       "patterns": [
         {
           "name": "keyword.control.flicker",
-          "match": "\\b(?:break|continue|return|print|error|pass|do|if|when|else|elif|for|each|while)\\b"
+          "match": "\\b(?:return|print|error|pass|do|if|else|elif|when)\\b"
         },
         {
           "name": "keyword.operator.flicker",
-          "match": "\\b(?:is|not|and|or|shl|shr)\\b"
+          "match": "\\b(?:is|in|not|and|or|shl|shr)\\b"
         },
         {
           "name": "keyword.operator.range.flicker",
-          "match": "(\\.\\.|(?<!:):(?!:))"
+          "match": "\\.\\.<?"
         },
         {
           "name": "keyword.operator.arithmetic.flicker",
-          "match": "(\\+|\\-|\\*|\/|%)"
+          "match": "(\\+|\\-|\\*{1,2}|\/|%)"
         },
         {
           "name": "keyword.operator.comparison.flicker",
@@ -123,6 +128,14 @@
           "match": "(=)"
         }
       ]
+    },
+    "keyword-loop": {
+      "match": "\\b(each|for|while|break|continue)(?:\\s*(:)\\s*(\\w+))?",
+      "captures": {
+        "1": { "name": "keyword.control.flicker" },
+        "2": { "name": "punctuation.separator.label.flicker" },
+        "3": { "name": "entity.name.label.flicker"}
+      }
     },
     "constant": {
       "patterns": [
@@ -209,12 +222,13 @@
       }
     },
     "class": {
-      "match": "\\b(class)\\s+`?(\\w+)`?\\s+(?:(<)\\s+`?(\\w+)`?)?",
+      "match": "\\b(class)\\s+`?(\\w+)`?\\s*(?:(<)\\s*`?(\\w+)`?)?\\s*(\\;|\\[\\s*\\])?",
       "captures": {
         "1": { "name": "storage.type.class.flicker" },
         "2": { "name": "entity.name.type.class.flicker" },
         "3": { "name": "keyword.operator.inherit.flicker" },
-        "4": { "name": "entity.name.type.class.flicker" }
+        "4": { "name": "entity.name.type.class.flicker" },
+        "5": { "name": "punctuation.terminator.class" }
       }
     }
   }
