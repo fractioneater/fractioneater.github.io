@@ -13,6 +13,7 @@
     { "include": "#lambda" },
     { "include": "#keyword" },
     { "include": "#keyword-loop" },
+    { "include": "#use" },
     { "include": "#constant" },
     { "include": "#variable" },
     { "include": "#type" },
@@ -35,7 +36,7 @@
       "end": "#",
       "patterns": [ { "include": "#block-comment" } ]
     },
-        "string": {
+    "string": {
       "name": "string.quoted.double.flicker",
       "begin": "\"",
       "beginCaptures": {
@@ -135,6 +136,26 @@
         "1": { "name": "keyword.control.flicker" },
         "2": { "name": "punctuation.separator.label.flicker" },
         "3": { "name": "entity.name.label.flicker"}
+      }
+    },
+    "use": {
+      "name": "meta.use.flicker",
+      "begin": "^(use)",
+      "beginCaptures": {
+        "1": { "name": "keyword.other.flicker" }
+      },
+      "patterns": [
+        {
+          "match": "(->)\\s*(\\w+)",
+          "captures": {
+            "1": { "name": "keyword.operator.alias.flicker" },
+            "2": { "name": "meta.use.alias.flicker" }
+          }
+        }
+      ],
+      "end": "(\\bfrom\\b|(?=\"))",
+      "endCaptures": {
+        "0": { "name": "keyword.other.flicker" }
       }
     },
     "constant": {
