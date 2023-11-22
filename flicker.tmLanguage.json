@@ -93,13 +93,33 @@
           "name": "meta.lambda.parameters.flicker",
           "begin": "\\|",
           "end": "\\|",
+          "captures": {
+            "0": { "name": "punctuation.terminator.parameters.flicker" }
+          },
           "patterns": [
             {
               "name": "variable.parameter.lambda.flicker",
               "match": "\\w+"
             }
           ]
-        }
+        },
+        { "include": "#comment" },
+        { "include": "#block-comment" },
+        { "include": "#string" },
+        { "include": "#lambda" },
+        { "include": "#keyword" },
+        { "include": "#keyword-loop" },
+        { "include": "#use" },
+        { "include": "#constant" },
+        { "include": "#variable" },
+        { "include": "#type" },
+        { "include": "#modifier" },
+        { "include": "#declaration" },
+        { "include": "#function" },
+        { "include": "#call" },
+        { "include": "#method-call" },
+        { "include": "#callable" },
+        { "include": "#class" }
       ]
     },
     "keyword": {
@@ -131,7 +151,7 @@
       ]
     },
     "keyword-loop": {
-      "match": "\\b(each|for|while|break|continue)(?:\\s*(:)\\s*(\\w+))?",
+      "match": "\\b(each|for|while|break|continue)\\b(?:\\s*(:)\\s*(\\w+))?",
       "captures": {
         "1": { "name": "keyword.control.flicker" },
         "2": { "name": "punctuation.separator.label.flicker" },
