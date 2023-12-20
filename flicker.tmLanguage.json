@@ -217,6 +217,10 @@
           "match": "\\b(var)\\b"
         },
         {
+          "name": "storage.type.value.flicker",
+          "match": "\\b(val)\\b"
+        },
+        {
           "name": "storage.type.function.flicker",
           "match": "\\b(fun)\\b"
         }
