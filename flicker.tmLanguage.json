@@ -137,6 +137,10 @@
           "match": "\\.\\.<?"
         },
         {
+          "name": "keyword.operator.bitwise.flicker",
+          "match": "(\\||&|\\^|~)"
+        },
+        {
           "name": "keyword.operator.arithmetic.flicker",
           "match": "(\\+|\\-|\\*{1,2}|\/|%)"
         },
@@ -146,7 +150,7 @@
         },
         {
           "name": "keyword.operator.assignment.flicker",
-          "match": "(=>?)"
+          "match": "(=)"
         }
       ]
     },
@@ -186,7 +190,7 @@
         },
         {
           "name": "constant.numeric.flicker",
-          "match": "\\b(0x[0-9A-Fa-f]*|[0-9]+(\\.?[0-9]*)?)\\b"
+          "match": "\\b(0x[0-9A-Fa-f]*|[0-9_]+(\\.?[0-9_]*)?)\\b"
         },
         {
           "name": "constant.numeric.hexadecimal.flicker",
