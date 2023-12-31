@@ -33,7 +33,7 @@
     "block-comment": {
       "name": "comment.block.flicker",
       "begin": "#:",
-      "end": "#",
+      "end": "#(?!:)",
       "patterns": [ { "include": "#block-comment" } ]
     },
     "string": {
