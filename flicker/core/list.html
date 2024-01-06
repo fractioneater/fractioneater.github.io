@@ -28,7 +28,7 @@
 <div class="page">
   <nav>
     <ul>
-      <li><a href="../">Main Page</a></li>
+      <li><a href="./">Core Library</a></li>
     </ul>
     <section>
       <h2>Classes</h2>
@@ -51,8 +51,41 @@
     </section>
   </nav>
   <main>
-    <h2>Core Library</h2>
+    <h2>List Class</h2>
     <hr>
+    <p>Subtype of <a href="./sequence.html">Sequence</a></p>
+    <h3>Static Methods</h3>
+    <div>
+      <dl class="method">
+        <dt>List() -> <i>List</i></dt>
+        <dd>Creates a new empty list.</dd>
+      </dl>
+      <dl class="method">
+        <dt>List.<strong>filled</strong>(size: <i>Integer</i>, value: <i>Object</i>) -> <i>List</i></dt>
+        <dd>Creates a new list with <code>size</code> elements, each initialized to <code>value</code>.</dd>
+      </dl>  
+    </div>
+    <h3>Operators</h3>
+    <div>
+      <dl class="method">
+        <dt>.<strong>*</strong> (count: <i>Integer</i>) -> <i>List</i></dt>
+        <dd>Returns a list made by repeating the initial one <code>count</code> times.</dd>
+      </dl>
+      <dl class="method">
+        <dt>.<strong>+</strong> (other: <i>List</i>) -> <i>List</i></dt>
+        <dd>Returns a list made by adding <code>other</code> to the end of this one.</dd>
+      </dl>
+    </div>
+    <h3>Properties / Attributes</h3>
+    <dl class="method">
+      <dt>.<strong>size</strong> or .<strong>count</strong> -> <i>Integer</i></dt>
+      <dd>The number of elements in the list.</dd>
+    </dl>
+    <h3>Methods</h3>
+    <dl class="method">
+      <dt>.<strong>add</strong>(value: <i>Object</i>) -> <i>None</i></dt>
+      <dd>Adds <code>value</code> to the end of list.</dd>
+    </dl>
   </main>
 </div>
 </html>
