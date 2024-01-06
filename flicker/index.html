@@ -13,14 +13,16 @@
     window.onload = function() {
       document.querySelector(".preload").classList.remove("preload");
     }
-  </script>  
+  </script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/shiki"></script>
+  <script type="module" src="./shiki-compile.js"></script> -->
 </head>
 <body class="preload">
 <header>
   <div class="page">
     <div class="main-column">
       <h1>Flicker</h1>
-      <h2>fractioneater.github.io</h2>    
+      <h2>fractioneater.github.io</h2>
     </div>
   </div>
 </header>
@@ -48,50 +50,30 @@
     <h2>Flicker is a small, dynamically typed scripting language</h2>
     <hr>
     <p>Instead of listening to me talk about it, why don't I show you some code:</p>
-    <div id="example-code" class="shiki-highlight">
-      <pre id="example-code-src" class="shiki-code">
-var i = 4
-
-fun three(arg)
-  if arg == 3
-    print "three"
-
-three(i)
-
-class Test
-  init(+property)
-    print "initializing instance"
-
-  getProperty()
-    return this.property
-
-print Test(49.202).getProperty()
-
-# output:
-# initializing instance
-# 49.202</pre>
+    <div id="example-code">
+      <pre style="background-color: var(--shiki-color-background)" tabindex="0"><code><span class="line"><span style="color: var(--shiki-token-keyword)">var</span><span style="color: var(--shiki-color-text)"> i </span><span style="color: var(--shiki-token-keyword)">=</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-constant)">4</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: var(--shiki-token-keyword)">fun</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-function)">three</span><span style="color: var(--shiki-color-text)">(arg)</span></span>
+<span class="line"><span style="color: var(--shiki-color-text)">  </span><span style="color: var(--shiki-token-keyword)">if</span><span style="color: var(--shiki-color-text)"> arg </span><span style="color: var(--shiki-token-keyword)">==</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-constant)">3</span></span>
+<span class="line"><span style="color: var(--shiki-color-text)">    </span><span style="color: var(--shiki-token-keyword)">print</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">&quot;three&quot;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: var(--shiki-token-function)">three</span><span style="color: var(--shiki-color-text)">(i)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: var(--shiki-token-keyword)">class</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-function)">Test</span></span>
+<span class="line"><span style="color: var(--shiki-color-text)">  </span><span style="color: var(--shiki-token-function)">init</span><span style="color: var(--shiki-color-text)">(</span><span style="color: var(--shiki-token-keyword)">+</span><span style="color: var(--shiki-color-text)">property)</span></span>
+<span class="line"><span style="color: var(--shiki-color-text)">    </span><span style="color: var(--shiki-token-keyword)">print</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">&quot;initializing instance&quot;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: var(--shiki-color-text)">  </span><span style="color: var(--shiki-token-function)">getProperty</span><span style="color: var(--shiki-color-text)">()</span></span>
+<span class="line"><span style="color: var(--shiki-color-text)">    </span><span style="color: var(--shiki-token-keyword)">return</span><span style="color: var(--shiki-color-text)"> this.property</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: var(--shiki-token-keyword)">print</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-function)">Test</span><span style="color: var(--shiki-color-text)">(</span><span style="color: var(--shiki-token-constant)">49.202</span><span style="color: var(--shiki-color-text)">).</span><span style="color: var(--shiki-token-function)">getProperty</span><span style="color: var(--shiki-color-text)">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: var(--shiki-token-comment)"># output:</span></span>
+<span class="line"><span style="color: var(--shiki-token-comment)"># initializing instance</span></span>
+<span class="line"><span style="color: var(--shiki-token-comment)"># 49.202</span></span></code></pre>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/shiki"></script>
-    <script type="module" src="./shiki.js"></script>
-<!-- <pre><code><span class="h-keyword">var</span><span> i</span><span class="h-operator"> =</span><span class="h-number"> 4</span>
-<span></span>
-<span class="h-keyword">if </span><span>i</span><span class="h-operator"> ==</span><span class="h-number"> 3</span>
-  <span class="h-keyword">print</span><span class="h-string"> "three"</span>
-<span></span>
-<span class="h-keyword">class</span><span class="h-class"> Test</span>
-  <span class="h-function">init(</span><span class="h-operator">+</span><span>property</span><span class="h-function">)</span>
-    <span class="h-keyword">print</span><span class="h-string"> "initializing instance"</span>
-  <span></span>
-  <span class="h-function">getProperty()</span>
-    <span class="h-keyword">return</span><span class="h-class"> this</span><span class="h-operator">.</span><span>property</span>
-<span></span>
-<span class="h-keyword">print</span><span class="h-class"> Test(</span><span class="h-number">49.202</span><span class="h-class">)</span><span class="h-operator">.</span><span class="h-function">getProperty()</span>
-<span></span>
-<span class="h-comment"># output:</span>
-<span class="h-comment"># initializing instance</span>
-<span class="h-comment"># 49.202</span></code></pre>       -->
     <p>This page is just a beginning, so you'll see more here once I'm satisfied with Flicker itself.</p>
-  </main>  
+  </main>
 </div>
 </body>
 </html>
