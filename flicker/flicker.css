@@ -99,18 +99,24 @@ h2 {
 }
 
 h3 {
+  margin-bottom: 12px;
   font: 400 20px "Rokkitt";
   color: var(--h3-blue);
 }
 
-.method > dt {
+dl {
+  margin: 12px 0 16px 0;
+}
+
+.methods > dt {
   margin-bottom: 6px;
   color: var(--method-title);
   font: 300 17px "Iosevka SS17 Web";
 }
 
-.method > dd {
+.methods > dd {
   margin-left: 12px;
+  margin-bottom: 16px;
   font-weight: 300;
 }
 

@@ -56,36 +56,66 @@
     <p>Subtype of <a href="./sequence.html">Sequence</a></p>
     <h3>Static Methods</h3>
     <div>
-      <dl class="method">
+      <dl class="methods">
         <dt>List() -> <i>List</i></dt>
         <dd>Creates a new empty list.</dd>
-      </dl>
-      <dl class="method">
         <dt>List.<strong>filled</strong>(size: <i>Integer</i>, value: <i>Object</i>) -> <i>List</i></dt>
         <dd>Creates a new list with <code>size</code> elements, each initialized to <code>value</code>.</dd>
       </dl>  
     </div>
     <h3>Operators</h3>
     <div>
-      <dl class="method">
+      <dl class="methods">
         <dt>.<strong>*</strong> (count: <i>Integer</i>) -> <i>List</i></dt>
         <dd>Returns a list made by repeating the initial one <code>count</code> times.</dd>
-      </dl>
-      <dl class="method">
-        <dt>.<strong>+</strong> (other: <i>List</i>) -> <i>List</i></dt>
+        <dt>.<strong>+</strong> (other: <i>Sequence</i>) -> <i>List</i></dt>
         <dd>Returns a list made by adding <code>other</code> to the end of this one.</dd>
       </dl>
     </div>
     <h3>Properties / Attributes</h3>
-    <dl class="method">
-      <dt>.<strong>size</strong> or .<strong>count</strong> -> <i>Integer</i></dt>
-      <dd>The number of elements in the list.</dd>
-    </dl>
+    <div>
+      <dl class="methods">
+        <dt>.<strong>size</strong> or .<strong>count</strong> -> <i>Integer</i></dt>
+        <dd>The number of elements in the list.</dd>
+      </dl>  
+    </div>
     <h3>Methods</h3>
-    <dl class="method">
-      <dt>.<strong>add</strong>(value: <i>Object</i>) -> <i>None</i></dt>
-      <dd>Adds <code>value</code> to the end of list.</dd>
-    </dl>
+    <div>
+      <dl class="methods">
+        <dt>.<strong>add</strong>(value: <i>Object</i>) -> <i>None</i></dt>
+        <dd>Adds <code>value</code> to the end of list.</dd>
+        <dt>.<strong>addAll</strong>(seq: <i>Sequence</i>) -> <i>None</i></dt>
+        <dd>Adds all elements of <code>seq</code> to the end of the list.</dd>
+        <dt>.<strong>clear</strong>() -> None</dt>
+        <dd>Remove all items from this list.</dd>
+        <dt>.<strong>filter</strong>(rule: |arg: <i>Object</i>| -> <i>Object</i>) -> <i>List</i></dt>
+        <dd>
+          Creates a new list with only the items from the original that <code>rule</code> returns a truthy value for.
+          Order of elements will stay the same.
+        </dd>
+        <dt>.<strong>get</strong>(index: <i>Integer</i>) or this[index] -> <i>Object</i></dt>
+        <dd>Returns item <code>index</code> of the list.</dd>
+        <dt>.<strong>set</strong>(index: <i>Integer</i>, value: <i>Object</i>) or this[index] = value -> <i>Object</i></dt>
+        <dd>Sets item <code>index</code> of this list to <code>value</code>, and returns <code>value</code>.</dd>
+        <dt>.<strong>indexOf</strong>(value: <i>Object</i>) -> <i>Integer, None</i></dt>
+        <dd>Returns the index of the first occurrence of <code>value</code>, or <code>None</code> if <code>value</code> is not in the list.</dd>
+<!--    
+        insert
+        iterate
+        iteratorValue
+        map
+        partition
+        quicksort
+        remove
+        removeAt
+        sort()
+        sort(1)
+        sum
+        swap
+        toString
+-->
+      </dl>  
+    </div>
   </main>
 </div>
 </html>
