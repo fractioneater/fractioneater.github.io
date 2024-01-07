@@ -5,7 +5,10 @@
     --title: #475f7a;
     --subtitle: #7688a4;
     --header: #3d70be;
+    --h3-blue: #2f6aa4;
     --nav-header: #677489;
+    --method-title: #133372;
+    --description-code: #334da1;
     --faded: #cececf;
     --almost-invisible: #dddddf;
   }
@@ -16,7 +19,10 @@
     --title: #a3adbe;
     --subtitle: #7f8eac;
     --header: #abc9ef;
+    --h3-blue: #50a3e9;
     --nav-header: #8c9bac;
+    --method-title: #cbdde4;
+    --description-code: #abcdef;
     --faded: #38384a;
     --almost-invisible: #29293a;
   }
@@ -92,9 +98,14 @@ h2 {
   font-weight: 500;
 }
 
+h3 {
+  font: 400 20px "Rokkitt";
+  color: var(--h3-blue);
+}
+
 .method > dt {
   margin-bottom: 6px;
-  color: #cbdde4;
+  color: var(--method-title);
   font: 300 17px "Iosevka SS17 Web";
 }
 
@@ -104,7 +115,7 @@ h2 {
 }
 
 dd > code {
-  color: #abcdef;
+  color: var(--description-code);
   font: 400 16px "Iosevka SS17 Web";
 }
 
