@@ -105,7 +105,7 @@
         <dt>.<strong>insert</strong>(index: <i>Integer</i>, value: <i>Object</i>) -> <i>Object</i></dt>
         <dd>
           <p>Inserts <code>value</code> into item <code>index</code> of the list, and returns <code>value</code>.</p>
-          <div id="list-insert-snippet">
+          <div id="list-insert-snippet" class="snippet-highlight">
             <pre class="shiki css-variables" style="background-color: var(--shiki-color-background)" tabindex="0"><code><span class="line"><span style="color: var(--shiki-token-keyword)">var</span><span style="color: var(--shiki-color-text)"> l </span><span style="color: var(--shiki-token-keyword)">=</span><span style="color: var(--shiki-color-text)"> [</span><span style="color: var(--shiki-token-constant)">1</span><span style="color: var(--shiki-color-text)">, </span><span style="color: var(--shiki-token-constant)">2</span><span style="color: var(--shiki-color-text)">, </span><span style="color: var(--shiki-token-constant)">4</span><span style="color: var(--shiki-color-text)">, </span><span style="color: var(--shiki-token-constant)">5</span><span style="color: var(--shiki-color-text)">]  </span><span style="color: var(--shiki-token-comment)"># [1, 2, 4, 5]</span></span>
 <span class="line"><span style="color: var(--shiki-color-text)">l.</span><span style="color: var(--shiki-token-function)">insert</span><span style="color: var(--shiki-color-text)">(</span><span style="color: var(--shiki-token-constant)">2</span><span style="color: var(--shiki-color-text)">, </span><span style="color: var(--shiki-token-constant)">3</span><span style="color: var(--shiki-color-text)">)        </span><span style="color: var(--shiki-token-comment)"># [1, 2, 3, 4, 5]</span></span>
 <span class="line"></span></code></pre>
@@ -135,13 +135,22 @@
         </dd>
         <dt>.<strong>removeAt</strong>(index: <i>Integer</i>) -> <i>Object</i></dt>
         <dd><p>Removes the element at <code>index</code> from the list, and returns it.</p></dd>
-<!--    
-        sort()
-        sort(1)
-        sum
-        swap
-        toString
--->
+        <dt>.<strong>sort</strong>() -> <i>None</i></dt>
+        <dd><p>Sorts this list from least to greatest, using quicksort.</p></dd>
+        <dt>.<strong>sort</strong>(comparer: |a: <i>Object</i>, b: <i>Object</i>| -> <i>Object</i>)</dt>
+        <dd>
+          <p>Sorts this list using <code>comparer</code> to compare values. A wrapper around <code>quicksort</code>.</p>
+          <div id="list-sort-snippet" class="snippet-highlight">
+            <pre class="shiki css-variables" style="background-color: var(--shiki-color-background)" tabindex="0"><code><span class="line"><span style="color: var(--shiki-token-keyword)">var</span><span style="color: var(--shiki-color-text)"> l </span><span style="color: var(--shiki-token-keyword)">=</span><span style="color: var(--shiki-color-text)"> [</span><span style="color: var(--shiki-token-constant)">1</span><span style="color: var(--shiki-color-text)">, </span><span style="color: var(--shiki-token-constant)">5</span><span style="color: var(--shiki-color-text)">, </span><span style="color: var(--shiki-token-constant)">7</span><span style="color: var(--shiki-color-text)">, </span><span style="color: var(--shiki-token-constant)">3</span><span style="color: var(--shiki-color-text)">, </span><span style="color: var(--shiki-token-constant)">6</span><span style="color: var(--shiki-color-text)">]   </span><span style="color: var(--shiki-token-comment)"># [1, 5, 7, 3, 6]</span></span>
+<span class="line"><span style="color: var(--shiki-color-text)">l.</span><span style="color: var(--shiki-token-function)">sort</span><span style="color: var(--shiki-color-text)"> { |a, b| a </span><span style="color: var(--shiki-token-keyword)">&gt;=</span><span style="color: var(--shiki-color-text)"> b }  </span><span style="color: var(--shiki-token-comment)"># [7, 6, 5, 3, 1]</span></span></code></pre>
+          </div>
+        </dd>
+        <dt>.<strong>sum</strong>() -> <i>Integer</i></dt>
+        <dd><p>Returns the sum of all elements in the list. A wrapper around <code>Sequence.reduce</code>.</p></dd>
+        <dt>.<strong>swap</strong>(index1: <i>Integer</i>, index2: <i>Integer</i>) -> <i>None</i></dt>
+        <dd><p>Switches the values at index <code>index1</code> and <code>index2</code>.</p></dd>
+        <dt>.<strong>toString</strong>() -> <i>String</i></dt>
+        <dd><p>Joins the elements of this list into a comma-separated string with <code>[</code> and <code>]</code> delimiters.</p></dd>
       </dl>  
     </div>
   </main>

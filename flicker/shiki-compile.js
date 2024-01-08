@@ -3,7 +3,7 @@ const flickerGrammar = await response.json();
 
 const items = [
   {
-    location: document.getElementById("example-code"),
+    name: "example-snippet",
     code:
 `var i = 4
 
@@ -27,11 +27,17 @@ print Test(49.202).getProperty()
 # 49.202`
   },
   {
-    location: document.getElementById("list-insert-snippet"),
+    name: "list-insert-snippet",
     code:
 `var l = [1, 2, 4, 5]  # [1, 2, 4, 5]
 l.insert(2, 3)        # [1, 2, 3, 4, 5]
 `
+  },
+  {
+    name: "list-sort-snippet",
+    code:
+`var l = [1, 5, 7, 3, 6]   # [1, 5, 7, 3, 6]
+l.sort { |a, b| a >= b }  # [7, 6, 5, 3, 1]`
   }
 ];
 
@@ -47,9 +53,13 @@ shiki.getHighlighter({
 }).then(highlighter => {
   for (var i in items) {
     const html = highlighter.codeToHtml(items[i].code, "flicker");
-    console.debug(html);
-    if (items[i].location != null) {
-      items[i].location.innerHTML = html;
+    const location = document.getElementById(items[i].name);
+  
+    if (location != null) {
+      console.groupCollapsed(items[i].name);
+      console.debug(html);
+      console.groupEnd();  
+      location.innerHTML = html;
     }
   }
 });
