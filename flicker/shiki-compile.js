@@ -25,6 +25,13 @@ print Test(49.202).getProperty()
 # output:
 # initializing instance
 # 49.202`
+  },
+  {
+    location: document.getElementById("list-insert-snippet"),
+    code:
+`var l = [1, 2, 4, 5]  # [1, 2, 4, 5]
+l.insert(2, 3)        # [1, 2, 3, 4, 5]
+`
   }
 ];
 

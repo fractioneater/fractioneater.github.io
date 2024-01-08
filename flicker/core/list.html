@@ -14,6 +14,8 @@
       document.querySelector(".preload").classList.remove("preload");
     }
   </script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/shiki"></script>
+  <script type="module" src="../shiki-compile.js"></script> -->
 </head>
 <body class="preload">
   <header>
@@ -58,56 +60,82 @@
     <div>
       <dl class="methods">
         <dt>List() -> <i>List</i></dt>
-        <dd>Creates a new empty list.</dd>
+        <dd><p>Creates a new empty list.</p></dd>
         <dt>List.<strong>filled</strong>(size: <i>Integer</i>, value: <i>Object</i>) -> <i>List</i></dt>
-        <dd>Creates a new list with <code>size</code> elements, each initialized to <code>value</code>.</dd>
+        <dd><p>Creates a new list with <code>size</code> elements, each initialized to <code>value</code>.</p></dd>
       </dl>  
     </div>
     <h3>Operators</h3>
     <div>
       <dl class="methods">
         <dt>.<strong>*</strong> (count: <i>Integer</i>) -> <i>List</i></dt>
-        <dd>Returns a list made by repeating the initial one <code>count</code> times.</dd>
+        <dd><p>Returns a list made by repeating the initial one <code>count</code> times.</p></dd>
         <dt>.<strong>+</strong> (other: <i>Sequence</i>) -> <i>List</i></dt>
-        <dd>Returns a list made by adding <code>other</code> to the end of this one.</dd>
+        <dd><p>Returns a list made by adding <code>other</code> to the end of this one.</p></dd>
       </dl>
     </div>
     <h3>Properties / Attributes</h3>
     <div>
       <dl class="methods">
         <dt>.<strong>size</strong> or .<strong>count</strong> -> <i>Integer</i></dt>
-        <dd>The number of elements in the list.</dd>
+        <dd><p>The number of elements in the list.</p></dd>
       </dl>  
     </div>
     <h3>Methods</h3>
     <div>
       <dl class="methods">
         <dt>.<strong>add</strong>(value: <i>Object</i>) -> <i>None</i></dt>
-        <dd>Adds <code>value</code> to the end of list.</dd>
+        <dd><p>Adds <code>value</code> to the end of list.</p></dd>
         <dt>.<strong>addAll</strong>(seq: <i>Sequence</i>) -> <i>None</i></dt>
-        <dd>Adds all elements of <code>seq</code> to the end of the list.</dd>
+        <dd><p>Adds all elements of <code>seq</code> to the end of the list.</p></dd>
         <dt>.<strong>clear</strong>() -> None</dt>
-        <dd>Remove all items from this list.</dd>
+        <dd><p>Remove all items from this list.</p></dd>
         <dt>.<strong>filter</strong>(rule: |arg: <i>Object</i>| -> <i>Object</i>) -> <i>List</i></dt>
         <dd>
-          Creates a new list with only the items from the original that <code>rule</code> returns a truthy value for.
-          Order of elements will stay the same.
+          <p>Creates a new list with only the items from the original that <code>rule</code> returns a truthy value for.
+          Order of elements will stay the same.</p>
+          <p>This method uses eager evaluation, so if you want a lazy alternative use <code>lazyFilter</code>.</p>
         </dd>
         <dt>.<strong>get</strong>(index: <i>Integer</i>) or this[index] -> <i>Object</i></dt>
-        <dd>Returns item <code>index</code> of the list.</dd>
+        <dd><p>Returns item <code>index</code> of the list.</p></dd>
         <dt>.<strong>set</strong>(index: <i>Integer</i>, value: <i>Object</i>) or this[index] = value -> <i>Object</i></dt>
-        <dd>Sets item <code>index</code> of this list to <code>value</code>, and returns <code>value</code>.</dd>
+        <dd><p>Sets item <code>index</code> of this list to <code>value</code>, and returns <code>value</code>.</p></dd>
         <dt>.<strong>indexOf</strong>(value: <i>Object</i>) -> <i>Integer, None</i></dt>
-        <dd>Returns the index of the first occurrence of <code>value</code>, or <code>None</code> if <code>value</code> is not in the list.</dd>
+        <dd><p>Returns the index of the first occurrence of <code>value</code>, or <code>None</code> if <code>value</code> is not in the list.</p></dd>
+        <dt>.<strong>insert</strong>(index: <i>Integer</i>, value: <i>Object</i>) -> <i>Object</i></dt>
+        <dd>
+          <p>Inserts <code>value</code> into item <code>index</code> of the list, and returns <code>value</code>.</p>
+          <div id="list-insert-snippet">
+            <pre class="shiki css-variables" style="background-color: var(--shiki-color-background)" tabindex="0"><code><span class="line"><span style="color: var(--shiki-token-keyword)">var</span><span style="color: var(--shiki-color-text)"> l </span><span style="color: var(--shiki-token-keyword)">=</span><span style="color: var(--shiki-color-text)"> [</span><span style="color: var(--shiki-token-constant)">1</span><span style="color: var(--shiki-color-text)">, </span><span style="color: var(--shiki-token-constant)">2</span><span style="color: var(--shiki-color-text)">, </span><span style="color: var(--shiki-token-constant)">4</span><span style="color: var(--shiki-color-text)">, </span><span style="color: var(--shiki-token-constant)">5</span><span style="color: var(--shiki-color-text)">]  </span><span style="color: var(--shiki-token-comment)"># [1, 2, 4, 5]</span></span>
+<span class="line"><span style="color: var(--shiki-color-text)">l.</span><span style="color: var(--shiki-token-function)">insert</span><span style="color: var(--shiki-color-text)">(</span><span style="color: var(--shiki-token-constant)">2</span><span style="color: var(--shiki-color-text)">, </span><span style="color: var(--shiki-token-constant)">3</span><span style="color: var(--shiki-color-text)">)        </span><span style="color: var(--shiki-token-comment)"># [1, 2, 3, 4, 5]</span></span>
+<span class="line"></span></code></pre>
+          </div>
+        </dd>
+        <dt>.<strong>iterate</strong>(iterator: <i>Object</i>) and .<strong>iteratorValue</strong>(iterator: <i>Object</i>) -> <i>Object</i></dt>
+        <dd><p>Iterates over the values in the list, starting from index 0.</p></dd>
+        <dt>.<strong>map</strong>(transformation: |arg: <i>Object</i>| -> <i>Object</i>) -> <i>List</i></dt>
+        <dd>
+          <p>Returns a list created by mapping all elements, in order, with <code>transformation</code>.</p>
+          <p>This method has eager evaluation; use <code>lazyMap</code> for a lazy version.</p>
+        </dd>
+        <dt>.<strong>partition</strong>(low: <i>Integer</i>, high: <i>Integer</i>, comparer: |a: <i>Object</i>, b: <i>Object</i>| -> <i>Object</i>) -> <i>Integer</i></dt>
+        <dd>
+          <p>Sorts through a partition of a list specified by <code>low</code> and <code>high</code>, and returns the position of the next partition.</p>
+          <p>Used internally by <code>quicksort</code>.</p>
+        </dd>
+        <dt>.<strong>quicksort</strong>(low: <i>Integer</i>, high: <i>Integer</i>, comparer: |a: <i>Object</i>, b: <i>Object</i>| -> <i>Object</i>) -> <i>None</i></dt>
+        <dd>
+          <p>Runs <code>partition</code> to sort through a partition of a list, and recursively calls itself to eventually sort the whole list.</p>
+          <p>Used internally by <code>sort()</code> and <code>sort(1)</code>.</p>
+        </dd>
+        <dt>.<strong>remove</strong>(value: <i>Object</i>) -> <i>Object, None</i></dt>
+        <dd>
+          <p>Removes the first occurrence of <code>value</code> from the list and returns it.
+          Returns <code>None</code> if <code>value</code> is not found.</p>
+        </dd>
+        <dt>.<strong>removeAt</strong>(index: <i>Integer</i>) -> <i>Object</i></dt>
+        <dd><p>Removes the element at <code>index</code> from the list, and returns it.</p></dd>
 <!--    
-        insert
-        iterate
-        iteratorValue
-        map
-        partition
-        quicksort
-        remove
-        removeAt
         sort()
         sort(1)
         sum

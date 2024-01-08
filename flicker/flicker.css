@@ -100,6 +100,7 @@ h2 {
 
 h3 {
   margin-bottom: 12px;
+  margin-top: 28px;
   font: 400 20px "Rokkitt";
   color: var(--h3-blue);
 }
@@ -117,10 +118,16 @@ dl {
 .methods > dd {
   margin-left: 12px;
   margin-bottom: 16px;
+}
+
+dd > p {
+  margin-top: 6px;
+  margin-bottom: 10px;
+  line-height: 1.3;
   font-weight: 300;
 }
 
-dd > code {
+dd > p > code {
   color: var(--description-code);
   font: 400 16px "Iosevka SS17 Web";
 }
