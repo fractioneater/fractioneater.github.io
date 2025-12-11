@@ -109,20 +109,21 @@ a:hover {
 }
 
 .monospace {
-  font: 300 "Iosevka SS17 Web", monospace;
+  font-weight: 300;
+  font-family: "Iosevka SS17 Web", monospace;
 }
 
 .align-left {
   max-width: 70%;
   padding-top: 30px;
-  margin: auto;
+  margin: auto auto 12rem;
 }
 
 .align-center {
   max-width: 60%;
   padding-top: 30px;
   text-align: center;
-  margin: auto;
+  margin: auto auto 12rem;
 }
 
 header {
@@ -144,7 +145,7 @@ header {
 
 pre {
   max-width: 660px;
-  margin: 0px;
+  margin: 0;
   padding: 20px;
   border-radius: 6px;
   overflow-x: auto;
@@ -182,7 +183,7 @@ code {
 }
 
 .button:hover {
-  background-color: var(-button-border);
+  background-color: var(--button-border);
 }
 
 .h-comment  { color: var(--highlight-comment); }

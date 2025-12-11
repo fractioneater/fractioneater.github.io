@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Portfolio - fractioneater</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&display=swap" type="text/css" rel="stylesheet">
+	<link href="/style.css" type="text/css" rel="stylesheet">
+	<link href="portfolio.css" type="text/css" rel="stylesheet">
+	<script src="slideshow.js"></script>
+</head>
+<body>
+<header>
+	<h1 class="title">Portfolio</h1>
+	<p class="subtitle">fractioneater.github.io</p>
+</header>
+
+<div id="main" class="align-left">
+	<h2>FTC Robotics</h2>
+	<p>All images courtesy of HHS Media.</p>
+	<div class="container">
+		<div class="row">
+			<div class="column">
+				<img class="demo cursor" src="static/robot-24-25-onshape.png" style="width:100%" onclick="currentSlide(1)" alt="2024-25 final design for team 6383">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="static/printer.jpg" style="width:100%" onclick="currentSlide(2)" alt="Prototype of a part for 6383">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="static/robot-early-2.jpg" style="width:100%" onclick="currentSlide(3)" alt="6383 robot in early  development">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="static/robot-early.jpg" style="width:100%" onclick="currentSlide(4)" alt="6383 robot in early development (again)">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="static/15317-bot.jpg" style="width:100%" onclick="currentSlide(5)" alt="15317 robot">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="static/robot-bucket.jpg" style="width:100%" onclick="currentSlide(6)" alt="6383 robot scoring a sample">
+			</div>
+		</div>
+
+		<div class="image-slide">
+			<img src="static/robot-24-25-onshape.png" style="width:100%" alt="">
+		</div>
+
+		<div class="image-slide">
+			<img src="static/printer.jpg" style="width:100%" alt="">
+		</div>
+
+		<div class="image-slide">
+			<img src="static/robot-early-2.jpg" style="width:100%" alt="">
+		</div>
+
+		<div class="image-slide">
+			<img src="static/robot-early.jpg" style="width:100%" alt="">
+		</div>
+
+		<div class="image-slide">
+			<img src="static/15317-bot.jpg" style="width:100%" alt="">
+		</div>
+
+		<div class="image-slide">
+			<img src="static/robot-bucket.jpg" style="width:100%" alt="">
+		</div>
+
+		<!-- Next and previous buttons -->
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+		<!-- Image text -->
+		<div class="caption-container">
+			<p id="caption"></p>
+		</div>
+	</div>
+</div>
+</body>
+</html>
