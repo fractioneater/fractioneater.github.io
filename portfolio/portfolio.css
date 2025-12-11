@@ -2,17 +2,15 @@
 	box-sizing: border-box;
 }
 
-/* Position the image container (needed to position the left and right arrows) */
 .container {
 	position: relative;
+	width: 75%;
 }
 
-/* Hide the images by default */
 .image-slide {
 	display: none;
 }
 
-/* Add a pointer when hovering over the thumbnail images */
 .cursor {
 	cursor: pointer;
 }
@@ -42,17 +40,12 @@
 	background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Container for image text */
 .caption-container {
 	text-align: center;
 	background-color: #1f2a39;
 	padding: 2px 16px;
 	color: white;
-}
-
-.row {
-	overflow: clip;
-	max-height: 98px;
+	margin-bottom: 4px;
 }
 
 .row:after {
@@ -61,13 +54,11 @@
 	clear: both;
 }
 
-/* Six columns side by side */
 .column {
 	float: left;
 	width: 16.66%;
 }
 
-/* Add a transparency effect for thumbnail images */
 .demo {
 	opacity: 0.6;
 }

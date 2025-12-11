@@ -15,7 +15,6 @@ function currentSlide(n) {
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("image-slide");
-  console.log(slides);
   let dots = document.getElementsByClassName("demo");
   let captionText = document.getElementById("caption");
 
