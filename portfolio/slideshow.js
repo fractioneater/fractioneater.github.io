@@ -1,4 +1,4 @@
-let slideIndex = [0, 0];
+let slideIndex = [0, 0, 0];
 window.onload = () => {
   for (let i = 0; i < slideIndex.length; i++)
     showSlides(slideIndex[i], i);
@@ -9,7 +9,7 @@ function plusSlides(n, idx) {
 }
 
 function switchSlide(n, idx) {
-  showSlides(slideIndex[idx] = n - 1, idx);
+  showSlides(slideIndex[idx] = n, idx);
 }
 
 function showSlides(n, idx) {
