@@ -1,28 +1,28 @@
-let slideIndex = 0;
-window.onload = () =>
-  showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+let slideIndex = [0, 0];
+window.onload = () => {
+  for (let i = 0; i < slideIndex.length; i++)
+    showSlides(slideIndex[i], i);
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n - 1);
+function plusSlides(n, idx) {
+  showSlides(slideIndex[idx] += n, idx);
 }
 
-function showSlides(n) {
+function switchSlide(n, idx) {
+  showSlides(slideIndex[idx] = n - 1, idx);
+}
+
+function showSlides(n, idx) {
   let i;
-  let slides = document.getElementsByClassName("image-slide");
-  let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
+  let slides = document.getElementsByClassName("image-slide" + idx);
+  let dots = document.getElementsByClassName("demo" + idx);
+  let captionText = document.getElementById("caption" + idx);
 
   if (n >= slides.length)
-    slideIndex = 0
+    slideIndex[idx] = 0
 
   if (n < 0)
-    slideIndex = slides.length - 1
+    slideIndex[idx] = slides.length - 1
 
   for (i = 0; i < slides.length; i++)
     slides[i].style.display = "none";
@@ -30,7 +30,7 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++)
     dots[i].className = dots[i].className.replace(" active", "");
 
-  slides[slideIndex].style.display = "flex";
-  dots[slideIndex].className += " active";
-  captionText.innerHTML = dots[slideIndex].alt;
+  slides[slideIndex[idx]].style.display = "flex";
+  dots[slideIndex[idx]].className += " active";
+  captionText.innerHTML = dots[slideIndex[idx]].alt;
 }

@@ -5,10 +5,16 @@
 .container {
 	position: relative;
 	width: 75%;
+	margin-bottom: 60px;
 }
 
-.image-slide {
+.slide {
 	display: none;
+}
+
+img {
+	width: 100%;
+	object-fit: cover;
 }
 
 .cursor {
@@ -54,9 +60,15 @@
 	clear: both;
 }
 
+.row {
+	display: flex;
+	width: 100%;
+	gap: 4px;
+}
+
 .column {
-	float: left;
-	width: 16.66%;
+	flex: 1;
+	object-fit: cover;
 }
 
 .demo {

@@ -13,7 +13,6 @@
 <body>
 <header>
 	<h1 class="title">Portfolio</h1>
-	<p class="subtitle">fractioneater.github.io</p>
 </header>
 
 <div id="main" class="align-left">
@@ -22,55 +21,114 @@
 	<div class="container">
 		<div class="row">
 			<div class="column">
-				<img class="demo cursor" src="static/robot-24-25-onshape.png" style="width:100%" onclick="currentSlide(1)" alt="2024-25 final design for team 6383">
+				<img class="demo demo0 cursor" src="static/robot-24-25-onshape.png" onclick="switchSlide(1, 0)"
+				     alt="2024-25 final design for team 6383">
 			</div>
 			<div class="column">
-				<img class="demo cursor" src="static/printer.jpg" style="width:100%" onclick="currentSlide(2)" alt="Prototype of a part for 6383">
+				<img class="demo demo0 cursor" src="static/printer.jpg" onclick="switchSlide(2, 0)" alt="Prototype of a part for 6383">
 			</div>
 			<div class="column">
-				<img class="demo cursor" src="static/robot-early-2.jpg" style="width:100%" onclick="currentSlide(3)" alt="6383 robot in early  development">
+				<img class="demo demo0 cursor" src="static/robot-early-2.jpg" onclick="switchSlide(3, 0)" alt="6383 robot in early  development">
 			</div>
 			<div class="column">
-				<img class="demo cursor" src="static/robot-early.jpg" style="width:100%" onclick="currentSlide(4)" alt="6383 robot in early development (again)">
+				<img class="demo demo0 cursor" src="static/robot-early.jpg" onclick="switchSlide(4, 0)"
+				     alt="6383 robot in early development (again)">
 			</div>
 			<div class="column">
-				<img class="demo cursor" src="static/15317-bot.jpg" style="width:100%" onclick="currentSlide(5)" alt="15317 robot">
+				<img class="demo demo0 cursor" src="static/15317-bot.jpg" onclick="switchSlide(5, 0)" alt="15317 robot">
 			</div>
 			<div class="column">
-				<img class="demo cursor" src="static/robot-bucket.jpg" style="width:100%" onclick="currentSlide(6)" alt="6383 robot scoring a sample">
+				<img class="demo demo0 cursor" src="static/robot-bucket.jpg" onclick="switchSlide(6, 0)" alt="6383 robot scoring a sample">
 			</div>
 		</div>
 
 		<div class="caption-container">
-			<p id="caption"></p>
+			<p id="caption0"></p>
 		</div>
 
-		<div class="image-slide">
-			<img src="static/robot-24-25-onshape.png" style="width:100%" alt="">
+		<div class="slide image-slide0">
+			<img src="static/robot-24-25-onshape.png" alt="">
 		</div>
 
-		<div class="image-slide">
-			<img src="static/printer.jpg" style="width:100%" alt="">
+		<div class="slide image-slide0">
+			<img src="static/printer.jpg" alt="">
 		</div>
 
-		<div class="image-slide">
-			<img src="static/robot-early-2.jpg" style="width:100%" alt="">
+		<div class="slide image-slide0">
+			<img src="static/robot-early-2.jpg" alt="">
 		</div>
 
-		<div class="image-slide">
-			<img src="static/robot-early.jpg" style="width:100%" alt="">
+		<div class="slide image-slide0">
+			<img src="static/robot-early.jpg" alt="">
 		</div>
 
-		<div class="image-slide">
-			<img src="static/15317-bot.jpg" style="width:100%" alt="">
+		<div class="slide image-slide0">
+			<img src="static/15317-bot.jpg" alt="">
 		</div>
 
-		<div class="image-slide">
-			<img src="static/robot-bucket.jpg" style="width:100%" alt="">
+		<div class="slide image-slide0">
+			<img src="static/robot-bucket.jpg" alt="">
 		</div>
 
-		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+	</div>
+
+	<h2>Other Projects</h2>
+	<div class="container">
+		<div class="row">
+			<div class="column">
+				<img class="demo demo1 cursor" src="static/robot-24-25-onshape.png" onclick="switchSlide(1, 1)"
+				     alt="2024-25 final design for team 6383">
+			</div>
+			<div class="column">
+				<img class="demo demo1 cursor" src="static/printer.jpg" onclick="switchSlide(2, 1)" alt="Prototype of a part for 6383">
+			</div>
+			<div class="column">
+				<img class="demo demo1 cursor" src="static/robot-early-2.jpg" onclick="switchSlide(3, 1)" alt="6383 robot in early  development">
+			</div>
+			<div class="column">
+				<img class="demo demo1 cursor" src="static/robot-early.jpg" onclick="switchSlide(4, 1)"
+				     alt="6383 robot in early development (again)">
+			</div>
+			<div class="column">
+				<img class="demo demo1 cursor" src="static/15317-bot.jpg" onclick="switchSlide(5, 1)" alt="15317 robot">
+			</div>
+			<div class="column">
+				<img class="demo demo1 cursor" src="static/robot-bucket.jpg" onclick="switchSlide(6, 1)" alt="6383 robot scoring a sample">
+			</div>
+		</div>
+
+		<div class="caption-container">
+			<p id="caption1"></p>
+		</div>
+
+		<div class="slide image-slide1">
+			<img src="static/robot-24-25-onshape.png" alt="">
+		</div>
+
+		<div class="slide image-slide1">
+			<img src="static/printer.jpg" alt="">
+		</div>
+
+		<div class="slide image-slide1">
+			<img src="static/robot-early-2.jpg" alt="">
+		</div>
+
+		<div class="slide image-slide1">
+			<img src="static/robot-early.jpg" alt="">
+		</div>
+
+		<div class="slide image-slide1">
+			<img src="static/15317-bot.jpg" alt="">
+		</div>
+
+		<div class="slide image-slide1">
+			<img src="static/robot-bucket.jpg" alt="">
+		</div>
+
+		<a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
 	</div>
 </div>
 </body>
