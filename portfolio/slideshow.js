@@ -8,14 +8,9 @@ function plusSlides(n, idx) {
   showSlides(slideIndex[idx] += n, idx);
 }
 
-function switchSlide(n, idx) {
-  showSlides(slideIndex[idx] = n, idx);
-}
-
 function showSlides(n, idx) {
   let i;
   let slides = document.getElementsByClassName("image-slide" + idx);
-  let dots = document.getElementsByClassName("demo" + idx);
   let captionText = document.getElementById("caption" + idx);
 
   if (n >= slides.length)
@@ -27,10 +22,6 @@ function showSlides(n, idx) {
   for (i = 0; i < slides.length; i++)
     slides[i].style.display = "none";
 
-  for (i = 0; i < dots.length; i++)
-    dots[i].className = dots[i].className.replace(" active", "");
-
   slides[slideIndex[idx]].style.display = "flex";
-  dots[slideIndex[idx]].className += " active";
-  captionText.innerHTML = dots[slideIndex[idx]].alt;
+  captionText.innerHTML = slides[slideIndex[idx]].children[0].alt;
 }

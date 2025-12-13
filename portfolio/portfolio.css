@@ -24,7 +24,7 @@ img {
 .prev, .next {
 	cursor: pointer;
 	position: absolute;
-	bottom: 40%;
+	bottom: 50%;
 	width: auto;
 	padding: 16px;
 	margin-top: -50px;
@@ -34,6 +34,8 @@ img {
 	border-radius: 0 3px 3px 0;
 	user-select: none;
 	-webkit-user-select: none;
+	background-color: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(12px);
 }
 
 .next {
@@ -48,34 +50,11 @@ img {
 
 .caption-container {
 	text-align: center;
-	background-color: #1f2a39;
-	padding: 2px 16px;
+	background-color: #05050590;
+	backdrop-filter: blur(12px);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
 	color: white;
-	margin-bottom: 4px;
-}
-
-.row:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
-.row {
-	display: flex;
-	width: 100%;
-	gap: 4px;
-}
-
-.column {
-	flex: 1;
-	object-fit: cover;
-}
-
-.demo {
-	opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-	opacity: 1;
 }
