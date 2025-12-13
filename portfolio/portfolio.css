@@ -4,17 +4,22 @@
 
 .gallery {
 	position: relative;
-	width: 75%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	margin-bottom: 60px;
 }
 
 .slide {
 	display: none;
+	max-height: 85vh;
 }
 
 img {
 	width: 100%;
-	object-fit: cover;
+	height: 100%;
+	align-self: center;
+	object-fit: contain;
 }
 
 .cursor {
@@ -31,7 +36,6 @@ img {
 	color: white;
 	font-weight: bold;
 	font-size: 20px;
-	border-radius: 0 3px 3px 0;
 	user-select: none;
 	-webkit-user-select: none;
 	background-color: rgba(0, 0, 0, 0.2);
@@ -40,7 +44,12 @@ img {
 
 .next {
 	right: 0;
-	border-radius: 3px 0 0 3px;
+	border-radius: 5px 0 0 5px;
+}
+
+.prev {
+	left: 0;
+	border-radius: 0 5px 5px 0;
 }
 
 .prev:hover,
@@ -50,11 +59,9 @@ img {
 
 .caption-container {
 	text-align: center;
-	background-color: #05050590;
-	backdrop-filter: blur(12px);
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
+	background-color: #1f2a39;
+	padding: 2px 12px;
+	width: 100%;
+	align-self: center;
 	color: white;
 }

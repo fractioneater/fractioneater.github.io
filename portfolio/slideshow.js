@@ -1,4 +1,4 @@
-let slideIndex = [0, 0, 0];
+let slideIndex = [0, 0, 0, 0];
 window.onload = () => {
   for (let i = 0; i < slideIndex.length; i++)
     showSlides(slideIndex[i], i);

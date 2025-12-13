@@ -3,11 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Portfolio - fractioneater</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&display=swap" type="text/css" rel="stylesheet">
-	<link href="/style.css" type="text/css" rel="stylesheet">
-	<link href="portfolio.css" type="text/css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com" rel="preconnect">
+	<link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&display=swap" rel="stylesheet" type="text/css">
+	<link href="/style.css" rel="stylesheet" type="text/css">
+	<link href="portfolio.css" rel="stylesheet" type="text/css">
 	<script src="slideshow.js"></script>
 </head>
 <body>
@@ -15,30 +15,37 @@
 	<h1 class="title">Portfolio</h1>
 </header>
 
-<div id="main" class="align-left">
+<div class="align-left" id="main">
+	<p>You'll find mostly images here. They're all captioned&#151;so scroll down a bit&#151;but if I were to explain everything in detail, this page would be
+		massive.</p>
+
 	<!-- I wish I were using SvelteKit :( -->
 	<h2>FTC Robotics</h2>
 	<p>Photos courtesy of HHS Media.</p>
 	<div class="gallery">
 		<div class="slide image-slide0">
-			<img src="static/robot-24-25-onshape.png"
-			     alt="2024-25 final design for my team, 6383">
+			<img alt="2024-25 final design for my team, 6383."
+			     src="static/robot-24-25-onshape.png">
 		</div>
 		<div class="slide image-slide0">
-			<img src="static/printer.jpg" alt="Prototype of a claw piece for 6383">
+			<img alt="Prototype of a claw piece for 6383."
+			     src="static/printer.jpg">
 		</div>
 		<div class="slide image-slide0">
-			<img src="static/robot-early-2.jpg" alt="6383 robot in early  development">
+			<img alt="6383 robot in early  development."
+			     src="static/robot-early-2.jpg">
 		</div>
 		<div class="slide image-slide0">
-			<img src="static/robot-early.jpg"
-			     alt="6383 robot in early development (again)">
+			<img alt="6383 robot in early development (again)."
+			     src="static/robot-early.jpg">
 		</div>
 		<div class="slide image-slide0">
-			<img src="static/15317-bot.jpg" alt="The robot for 15317, the other school team">
+			<img alt="The robot for 15317, the other school team."
+			     src="static/15317-bot.jpg">
 		</div>
 		<div class="slide image-slide0">
-			<img src="static/robot-bucket.jpg" alt="6383 robot scoring a sample">
+			<img alt="6383 robot scoring a sample."
+			     src="static/robot-bucket.jpg">
 		</div>
 
 		<div class="caption-container">
@@ -53,26 +60,28 @@
 	<p>Some small, some large. I like to create my own solution to problems using the tools I have.</p>
 	<div class="gallery">
 		<div class="slide image-slide1">
-			<img src="static/shelf.jpg"
-			     alt="A desk shelf, designed in Onshape and cut on a Shaper Origin">
+			<img alt="A desk shelf, designed in Onshape and cut on a Shaper Origin."
+			     src="static/shelf.jpg">
 		</div>
 		<div class="slide image-slide1">
-			<img src="static/shelf-onshape.png" alt="The same shelf in CAD">
+			<img alt="The same shelf in CAD."
+			     src="static/shelf-onshape.png">
 		</div>
 		<div class="slide image-slide1">
-			<img src="static/pencil-body.jpg"
-			     alt="The pencil my brother now uses—fully custom barrel and grip 3D printed (pardon the quality, this photo is old)">
+			<img alt="The pencil my brother now uses—fully custom barrel and grip 3D printed (pardon the quality, this photo is old)."
+			     src="static/pencil-body.jpg">
 		</div>
 		<div class="slide image-slide1">
-			<img src="static/cord-holder.jpg" alt="A simple but perfectly functional 3D printed cord holder">
+			<img alt="A simple but perfectly functional 3D printed cord holder."
+			     src="static/cord-holder.jpg">
 		</div>
 		<div class="slide image-slide1">
-			<img src="static/cord-holder-others.jpg"
-			     alt="... and the less simple, less functional earlier versions">
+			<img alt="... and the less simple, less functional earlier versions."
+			     src="static/cord-holder-others.jpg">
 		</div>
 		<div class="slide image-slide1">
-			<img src="static/spice-shelf.jpg"
-			     alt="A spice shelf made from balsa and plywood">
+			<img alt="A spice shelf made from balsa and plywood."
+			     src="static/spice-shelf.jpg">
 		</div>
 
 		<div class="caption-container">
@@ -85,21 +94,23 @@
 	</div>
 
 	<h2>Fun Engineering Projects</h2>
-	<p>Because learning is fun.</p>
+	<p>Because learning is fun, regardless of whether the thing you make is practical.</p>
 	<div class="gallery">
 		<div class="slide image-slide2">
-			<img src="static/rugged-buggy.jpg"
-			     alt="A little car with with spring suspension... whoops, the front wheels are on backwards">
+			<img alt="A little car with with spring suspension... whoops, the front wheels are on backwards."
+			     src="static/rugged-buggy.jpg">
 		</div>
 		<div class="slide image-slide2">
-			<img src="static/garagebox.jpg"
-			     alt="A box with a garage door mechanism, designed with my younger brother to teach him Onshape">
+			<img alt="A box with a garage door mechanism, designed with my younger brother to teach him Onshape."
+			     src="static/garagebox.jpg">
 		</div>
 		<div class="slide image-slide2">
-			<img src="static/garagebox-onshape.png" alt="The garage-box in CAD">
+			<img alt="The garage-box in CAD."
+			     src="static/garagebox-onshape.png">
 		</div>
 		<div class="slide image-slide2">
-			<img src="static/pin-cannon.jpg" alt="A little cannon made in Tinkercad back in 2022">
+			<img alt="A little cannon made in Tinkercad back in 2022."
+			     src="static/pin-cannon.jpg">
 		</div>
 
 		<div class="caption-container">
@@ -111,6 +122,40 @@
 	</div>
 
 	<h2>Digital Projects</h2>
+	<p>There too many ways to be creative on computers.</p>
+	<div class="gallery">
+		<div class="slide image-slide3">
+			<img alt="Earful, my family's music player site. My father made the backend, and I did the frontend in SvelteKit." src="static/earful.png">
+		</div>
+		<div class="slide image-slide3">
+			<img alt="Flicker, my own programming language. It once was Lox, the toy language from Crafting Interpreters by Bob Nystrom, but I've expanded it greatly since then."
+			     src="static/flicker.png">
+		</div>
+		<div class="slide image-slide3">
+			<img alt="A simple platformer, originally made in Scratch, now recreated in Godot." src="static/ruins-godot.png">
+		</div>
+		<div class="slide image-slide3">
+			<img alt="The original platformer in Scratch." src="static/ruins-scratch.png">
+		</div>
+		<div class="slide image-slide3">
+			<img alt="Circle Strike: an online multiplayer platformer, made in Scratch in 2021." src="static/circle-strike.png">
+		</div>
+		<div class="slide image-slide3">
+			<img alt="Circle Smash: the sequel to Circle Strike, made in Scratch in 2022. I'm incredibly proud of this game, but it's barely finished."
+			     src="static/circle-smash.png">
+		</div>
+		<div class="slide image-slide3">
+			<img alt="Plot Twister, a choose-your-own-adventure story engine."
+			     src="static/plot-twister.png">
+		</div>
+
+		<div class="caption-container">
+			<p id="caption3"></p>
+		</div>
+
+		<a class="prev" onclick="plusSlides(-1, 3)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1, 3)">&#10095;</a>
+	</div>
 
 </div>
 </body>
